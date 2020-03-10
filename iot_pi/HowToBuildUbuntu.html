@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>How to Build Ubuntu | ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://yoursite.com/iot_pi/HowToBuildUbuntu.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="http://yoursite.com/iot_pi/HowToBuildUbuntu.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="The procedure to describes how to create Ubuntu image on LEC-PX30 with Industrial Pi-SMARC. The version of Ubuntu used is 18.04.3 LTS.  Recommended HardwareTo setup the build environment for Ubuntu im">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Build Ubuntu">
+<meta property="og:url" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="The procedure to describes how to create Ubuntu image on LEC-PX30 with Industrial Pi-SMARC. The version of Ubuntu used is 18.04.3 LTS.  Recommended HardwareTo setup the build environment for Ubuntu im">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid_m.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid_s.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_parameter.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_u-boot.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/image-20200309102707320.png">
+<meta property="article:published_time" content="2020-03-09T02:32:09.419Z">
+<meta property="article:modified_time" content="2020-03-09T02:32:09.419Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/iot_pi/" class="main-nav-link current">Industrial Pi</a><a href="/neuron_pi/" class="main-nav-link">Neuron Pi</a>
+      <a target="_blank" rel="noopener" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+    </nav>
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How to Build Ubuntu</h1>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>The procedure to describes how to create Ubuntu image on <strong>LEC-PX30 with Industrial Pi-SMARC</strong>. The version of Ubuntu used is 18.04.3 LTS. </p>
+<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Ubuntu image creation, a Linux host with the following configuration is recommended. A host machine with adequate processing power and disk space is ideal as the packages can run several GBs in size and the build can take a lot of time.</p>
+<ul>
+<li>Intel Core-i7 processor (&gt;= 4 cores)</li>
+<li>8 GB RAM</li>
+<li>1 TB disk space</li>
+<li>High speed network connectivity</li>
+<li>OS: Ubuntu 16.04 LTS/Ubuntu 18.04 LTS</li>
+</ul>
+<p>Update apt repositories list on your host machine.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt update</span></span><br></pre></td></tr></table></figure>
+<p>Install kernel and u-boot dependencies.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl</span></span><br><span class="line">zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev</span><br><span class="line">x11proto-core-dev libx11-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils</span><br><span class="line">xsltproc unzip device-tree-compiler liblz4-tool</span><br></pre></td></tr></table></figure>
+<p>Install buildroot dependencies.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install libfile-which-perl sed make binutils gcc g++ bash patch gzip</span><br><span class="line">bzip2 perl tar cpio python unzip rsync file bc libmpc3 git repo texinfo pkg-config cmake</span><br><span class="line">tree texinfo</span><br></pre></td></tr></table></figure>
+<h2 id="Preparing-Ubuntu-Root-File-System" class="article-heading"><a href="#Preparing-Ubuntu-Root-File-System" class="headerlink" title="Preparing Ubuntu Root File System"></a>Preparing Ubuntu Root File System<a class="article-anchor" href="#Preparing-Ubuntu-Root-File-System" aria-hidden="true"></a></h2><ol>
+<li><p>Install QEMU on the development host PC with Ubuntu OS</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install qemu-user-static</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Download Ubuntu 18.04 base from <a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/">http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/</a>   and choose this one: <code>ubuntu-base-18.04.1-base-arm64.tar.gz</code></p>
+</li>
+<li><p>Create a temporary folder and extract downloaded tarball into the folder.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir $HOME&#x2F;temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Extract the file to temp folder</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo tar -xpf ubuntu-base-18.04.2-base-arm64.tar.gz -C $HOME&#x2F;temp</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Configure-the-rootfs" class="article-heading"><a href="#Configure-the-rootfs" class="headerlink" title="Configure the rootfs"></a>Configure the rootfs<a class="article-anchor" href="#Configure-the-rootfs" aria-hidden="true"></a></h2><ol>
+<li><p>Get your network ready:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp -b &#x2F;etc&#x2F;resolv.conf $HOME&#x2F;temp&#x2F;etc&#x2F;resolv.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Prepare QEMU:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp &#x2F;usr&#x2F;bin&#x2F;qemu-aarch64-static $HOME&#x2F;temp&#x2F;usr&#x2F;bin&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Change root:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo chroot $HOME&#x2F;temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Update and upgrade:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ apt update</span><br><span class="line">$ apt upgrade</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install the required tools or utilities.  While installing the tools/utilities, you will be prompted through GUI menu to make certain selections such as those for date/time/region. Please make the appropriate selections and proceed.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ apt install vim git sudo net-tools ifupdown kmod iputils-ping man wget bash-completion alsa-utils apt-utils usbutils locales i2c-tools netplan.io vnc4server lm-sensors usbmount gcc g++ cmake  can-utils sox v4l-utils glmark2 xubuntu-desktop</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add user name (here is the example how to add it. You can enter what you want)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ useradd -s &#39;&#x2F;bin&#x2F;bash&#39; -m -G adm,sudo adlink</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Set user’s password (here is the example how to add it. You can enter what you want)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ passwd adlink123</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Set the root user’s password (here is the example how to add it. You can enter what you want)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ passwd root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add host name to <code>/etc/hostname</code>(here is the example how to add it. You can enter what you want)</p>
+   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo ‘adlink’ &gt; &#x2F;etc&#x2F;hostname</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add host entry in <code>/etc/hosts</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vim &#x2F;etc&#x2F;hosts</span><br></pre></td></tr></table></figure>
+<p>Add the following configuration:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.0.1 adlink</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>After all the work is done, exit the chroot environment.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ exit</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Add-I-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-O-Drivers-to-Rootfs" class="headerlink" title="Add I/O Drivers to Rootfs"></a>Add I/O Drivers to Rootfs<a class="article-anchor" href="#Add-I-O-Drivers-to-Rootfs" aria-hidden="true"></a></h2><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="Ethernet &amp; CAN Bus"></a>Ethernet &amp; CAN Bus<a class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
+<li><p>Create a directory to copy the Ethernet and CAN kernel modules</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir $HOME&#x2F;temp&#x2F;home&#x2F;adlink&#x2F;rockchip_test</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Please click <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Ubuntu-kernel-module_2020-02-24.zip">here</a> to download and copy  <strong>smsc9500.ko,  smscusbnet.ko and mcp25xxfd.ko kernel modules</strong> into rockchip_test folder from host PC. </p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp &lt;your_path&gt;&#x2F;*.ko $HOME&#x2F;temp&#x2F;home&#x2F;adlink&#x2F;rockchip_test&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use Netplan to enables easily configuring networking on system. Please create a <code>01-network-manager-all.yaml</code> file under /etc/netplan</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vim $HOME&#x2F;temp&#x2F;etc&#x2F;netplan&#x2F;01-network-manager-all.yaml</span><br></pre></td></tr></table></figure>
+<p> Add the following content, then save it.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Let NetworkManager manage all devices on this system </span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: NetworkManager</span><br></pre></td></tr></table></figure>
+<p> <strong>Note:</strong> <a target="_blank" rel="noopener" href="https://wiki.ubuntu.com/Netplan">Netplan</a> enables easily configuring networking on a system via YAML files. Netplan processes the YAML and generates the required configurations for either NetworkManager or systemd-network the system’s renderer. Netplan <a target="_blank" rel="noopener" href="http://blog.cyphermox.net/2017/06/netplan-by-default-in-1710.html">replaced ifupdown</a> as the default configuration utility starting with Ubuntu 17.10 Artful. </p>
+</li>
+</ol>
+<h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="Audio"></a>Audio<a class="article-anchor" href="#Audio" aria-hidden="true"></a></h4><ol>
+<li><p>Please click <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/asound.state">here</a> to download <strong>asound.state</strong> file and copy to <code>/var/lib/alsa/</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp asound.state $HOME&#x2F;temp&#x2F;var&#x2F;lib&#x2F;alsa&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="Enable-I-O-Interfaces" class="article-heading"><a href="#Enable-I-O-Interfaces" class="headerlink" title="Enable I/O Interfaces"></a>Enable I/O Interfaces<a class="article-anchor" href="#Enable-I-O-Interfaces" aria-hidden="true"></a></h4><ol>
+<li><p>Please click <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Load.sh">here</a> to download and copy <strong>Load.sh</strong> file to the <code>rockchip_test</code>folder. </p>
+<p><strong>Note</strong>: it is shell script to insert modules on every reboot </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp Load.sh $HOME&#x2F;temp&#x2F;home&#x2F;adlink&#x2F;rockchip_test&#x2F;Load.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Give execute permissions to script</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo chmod +x $HOME&#x2F;temp&#x2F;home&#x2F;adlink&#x2F;rockchip_test&#x2F;Load.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Please click <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/rc.local">here</a> to download and copy <strong>rc.local</strong> to <code>temp/etc/</code> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp rc.local $HOME&#x2F;temp&#x2F;etc&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Give executable permissions.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo chmod +x $HOME&#x2F;temp&#x2F;etc&#x2F;rc.local</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="Adding MRAA"></a>Adding MRAA<a class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4><ol>
+<li><p>Download the <code>adlink-mraa-master.tar</code> file from <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/adlink-mraa-master.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir $HOME&#x2F;mraa</span><br><span class="line">$ tar -xvf adlink-mraa-master.tar -C $HOME&#x2F;mraa&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;bin&#x2F;* $HOME&#x2F;temp&#x2F;usr&#x2F;bin&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;include&#x2F;* $HOME&#x2F;temp&#x2F;usr&#x2F;include&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;lib&#x2F;libmraa.so* $HOME&#x2F;temp&#x2F;usr&#x2F;lib&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;lib&#x2F;pkgconfig&#x2F;mraa.pc $HOME&#x2F;temp&#x2F;usr&#x2F;lib&#x2F;pkgconfig&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;share&#x2F;* $HOME&#x2F;temp&#x2F;usr&#x2F;share&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Make-the-Root-File-System" class="article-heading"><a href="#Make-the-Root-File-System" class="headerlink" title="Make the Root File System"></a>Make the Root File System<a class="article-anchor" href="#Make-the-Root-File-System" aria-hidden="true"></a></h2><p>Execute the commands below to make the rootfs.img. Notice that you need change the “count” value according to the size of the “temp” folder.</p>
+<p>Below command will create new rootfs.img file of size 7.4 GB (6.9 GB)</p>
+<pre><code>$ dd if=/dev/zero of=rootfs.img bs=1M count=7065 status=progress &amp;&amp; sync
+$ sudo mkfs.ext4 rootfs.img
+$ mkdir rootfs
+$ sudo mount rootfs.img rootfs/
+$ sudo cp -rfp $HOME/temp/*  rootfs/
+$ sudo umount rootfs/
+$ e2fsck -p -f rootfs.img
+</code></pre><p> The final root files system rootfs.img is ready.</p>
+<h2 id="Adding-RFS-Image-to-Buildroot" class="article-heading"><a href="#Adding-RFS-Image-to-Buildroot" class="headerlink" title="Adding RFS Image to Buildroot"></a>Adding RFS Image to Buildroot<a class="article-anchor" href="#Adding-RFS-Image-to-Buildroot" aria-hidden="true"></a></h2><p>To add the created root file system image to LEC-PX30 Buildroot Linux, follow the procedure below:</p>
+<p>Before start to compile Buildroot, please Install the required packages on the development host PC.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install repo git-core gitk git-gui gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler gcc-aarch64-linux-gnu mtools parted libudev-dev libusb-1.0-0-dev python-linaro-image-tools linaro-image-tools autoconf autotools-dev libsigsegv2 m4 intltool libdrm-dev curl sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio python unzip rsync file bc wget libncurses5 libqt4-dev libglib2.0-dev libgtk2.0-dev libglade2-dev cvs git mercurial rsync openssh-client subversion asciidoc w3m dblatex graphviz python-matplotlib libc6:i386 libssl-dev texinfo liblz4-tool genext2fs lib32stdc++6</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>Download <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/v1.0.8-20200125/px30_buildroot_es2_sdk_20200125.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
+<p><strong>Note</strong>: use <code>iPIsmarc-es2</code> branch and root for the building. use<code>git branch</code> command under <strong>px30_buildroot/kernel</strong> to check the branch version.</p>
+</li>
+<li><p>Change directory to px30_buildroot.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd px30_buildroot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create a temporary directory.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir ubunturootfs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Copy the created rootfs.img to ubunturootfs.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cp &lt;path_to_ubuntu_rootfs&gt;&#x2F;rootfs.img ubunturootfs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create a <strong>parameter-ubuntu.txt</strong> file under device/rockchip/px30 folder.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cp device&#x2F;rockchip&#x2F;px30&#x2F;parameter-buildroot.txt device&#x2F;rockchip&#x2F;px30&#x2F;parameter-ubuntu.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Change directory to ubunturootfs folder and to check UUID of rootfs image, run the command below.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ file ubunturootfs&#x2F;rootfs.img</span><br></pre></td></tr></table></figure>
+<p><img align="center" src="HowToBuildUbuntu.assets/ubuntu_uuid.png"></p>
+</li>
+<li><p>Modify UUID you have in<code>parameter-ubuntu.txt</code> file</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ vi device&#x2F;rockchip&#x2F;px30&#x2F;parameter-ubuntu.txt</span><br></pre></td></tr></table></figure>
+<p> <img src="HowToBuildUbuntu.assets/ubuntu_uuid_m.png" alt="img"></p>
+<p>Now, modify the rootfs size and alter the user data starting address as per requirement. In the screenshot below, we are changing rootfs size to 7GB.<img src="HowToBuildUbuntu.assets/ubuntu_uuid_s.png" alt="img"></p>
+</li>
+<li><p>Open <code>BoardConfig_open.mk</code> file and change the path for <code>parameter-ubuntu.txt</code> and <code>rootfs.img</code> files.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vi device&#x2F;rockchip&#x2F;px30&#x2F;BoardConfig_open.mk</span><br></pre></td></tr></table></figure>
+<p> <img src="HowToBuildUbuntu.assets/ubuntu_parameter.png" alt="img"></p>
+</li>
+<li><p>Open <code>rk3326.dtsi</code> file and add new part UUID or device partition. In the screenshot below, we have added <code>/dev/mmcblk1p8 partition</code>.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vi kernel&#x2F;arch&#x2F;arm64&#x2F;boot&#x2F;dts&#x2F;rockchip&#x2F;rk3326-linux.dtsi</span><br></pre></td></tr></table></figure>
+<p><img src="HowToBuildUbuntu.assets/ubuntu_u-boot.png" alt="img"></p>
+</li>
+<li><p>Change directory to <code>px30_buildroot</code></p>
+   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd px30_buildroot</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="11">
+<li><p>Run build.sh</p>
+   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;build.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>After you run “./build.sh”, a menuconfig screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
+<p><img src="HowToBuildUbuntu.assets/image-20200309102707320.png" alt="image-20200309102707320"></p>
+<p><strong>Note:</strong> The image will be generated as <strong>“update.img”</strong> under rockdev folder.</p>
+</li>
+<li><p>Please refer to <a target="_blank" rel="noopener" href="https://ipi.wiki/iot_pi/HowToFlashImage.html">here</a> to guide you how to flash Ubuntu Image to SD card.</p>
+</li>
+</ol>
+
+              </div>
+              <footer class="article-footer">
+                <a href="HowToFlashImage.html" class="article-footer-prev" title="sidebar.iot_pi.Prepre your SD Card"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToBuildYocto.html" class="article-footer-next" title="sidebar.iot_pi.How to Build Yocto"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details><summary>Supported OS</summary><a href="UbuntuImages.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImages.html" class="sidebar-link">Yocto</a><a href="HowToFlashImage.html" class="sidebar-link">Prepre your SD Card</a></details></strong><strong class="sidebar-title"><details open><summary>Build your OS</summary><a href="HowToBuildUbuntu.html" class="sidebar-link current first">How to Build Ubuntu</a><a href="HowToBuildYocto.html" class="sidebar-link">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details><summary>Adding MRAA</summary><a href="HowToInstallMRAA.html" class="sidebar-link first">How to Install</a></details></strong><strong class="sidebar-title"><details><summary>Hardware Overview</summary><a href="SMARCModuleOverview.html" class="sidebar-link first">SMARC Overview</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy; 2020 <a href="https://www.adlinktech.com/" target="_blank">ADLINK Technology Inc. All Rights Reserved.</a><br>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/iot_pi/" class="mobile-nav-link current">Industrial Pi</a><a href="/neuron_pi/" class="mobile-nav-link">Neuron Pi</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details><summary>Supported OS</summary><a href="UbuntuImages.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImages.html" class="mobile-nav-link">Yocto</a><a href="HowToFlashImage.html" class="mobile-nav-link">Prepre your SD Card</a></details></strong><strong class="mobile-nav-title"><details open><summary>Build your OS</summary><a href="HowToBuildUbuntu.html" class="mobile-nav-link current first">How to Build Ubuntu</a><a href="HowToBuildYocto.html" class="mobile-nav-link">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details><summary>Adding MRAA</summary><a href="HowToInstallMRAA.html" class="mobile-nav-link first">How to Install</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware Overview</summary><a href="SMARCModuleOverview.html" class="mobile-nav-link first">SMARC Overview</a></details></strong>
+    
+  </div>
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
