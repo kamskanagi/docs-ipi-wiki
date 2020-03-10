@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
+    
+    <lastmod>2020-03-10T11:12:51.057Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/iot_pi/HowToFlashImage.html</loc>
     
-    <lastmod>2020-03-09T06:52:38.008Z</lastmod>
+    <lastmod>2020-03-10T05:16:05.789Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
+    
+    <lastmod>2020-03-10T05:12:49.406Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
     
     <lastmod>2020-03-09T06:41:28.406Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
-    
-    <lastmod>2020-03-09T06:38:16.475Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>http://yoursite.com/iot_pi/HowToSetup.html</loc>
     
     <lastmod>2020-02-27T06:56:33.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
-    
-    <lastmod>2020-02-26T06:31:01.633Z</lastmod>
     
   </url>
   
