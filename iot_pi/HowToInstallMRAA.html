@@ -67,8 +67,8 @@
 <meta property="og:description" content="Eclipse Mraa (Libmraa) is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numbering matches the board that you">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/iot_pi/HowToInstallMRAA.assets/image-20191215174758939.png">
-<meta property="article:published_time" content="2020-03-09T06:41:28.406Z">
-<meta property="article:modified_time" content="2020-03-09T06:41:28.406Z">
+<meta property="article:published_time" content="2020-03-12T02:43:31.808Z">
+<meta property="article:modified_time" content="2020-03-12T02:43:31.808Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/iot_pi/HowToInstallMRAA.assets/image-20191215174758939.png">
@@ -123,7 +123,20 @@
 <p><br></p>
 <p>Our MRAA libraries has been ready on <a target="_blank" rel="noopener" href="https://github.com/eclipse/mraa"><strong>Eclipse MRAA GitHub</strong></a> whic is supported on <strong>LEC-PX30 &amp; LEC-AL-AI with industrial Pi-SMARC</strong> as the following screen.</p>
 <p><img src="HowToInstallMRAA.assets/image-20191215174758939.png" alt="image-20191215174758939"></p>
-<h2 id="How-to-Build-MRAA-on-your-boards" class="article-heading"><a href="#How-to-Build-MRAA-on-your-boards" class="headerlink" title="How to Build MRAA on your boards:"></a>How to Build MRAA on your boards:<a class="article-anchor" href="#How-to-Build-MRAA-on-your-boards" aria-hidden="true"></a></h2><p>Please refer to <a target="_blank" rel="noopener" href="https://github.com/eclipse/mraa/blob/master/docs/building.md">here</a> to guide you how to build MRAA</p>
+<h2 id="How-to-Build-amp-Install-MRAA-on-your-boards" class="article-heading"><a href="#How-to-Build-amp-Install-MRAA-on-your-boards" class="headerlink" title="How to Build &amp; Install MRAA on your boards:"></a>How to Build &amp; Install MRAA on your boards:<a class="article-anchor" href="#How-to-Build-amp-Install-MRAA-on-your-boards" aria-hidden="true"></a></h2><h4 id="Building-mraa-on-Ubuntu" class="article-heading"><a href="#Building-mraa-on-Ubuntu" class="headerlink" title="Building mraa on Ubuntu:"></a>Building mraa on Ubuntu:<a class="article-anchor" href="#Building-mraa-on-Ubuntu" aria-hidden="true"></a></h4><ol>
+<li><p>Build dependencies is required:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git build-essential swig3.0 python-dev nodejs-dev cmake libjson-c-dev python3-dev</span><br></pre></td></tr></table></figure>
+<p><strong>Note: </strong>On Ubuntu Bionic (18.04) you’ll need to downgrade node.js (see <a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions">nodesource</a> for some handy         install scripts) or patch SWIG. </p>
+</li>
+<li><p>Basic build Steps:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;eclipse&#x2F;mraa.git</span><br><span class="line">$ cd mraa</span><br><span class="line">$ make build</span><br><span class="line">$ cd build</span><br><span class="line">$ cmake ..</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> If this goes wrong and you have all the dependencies installed, then please file an issue with the full output of <code>cmake ..</code> and <code>make</code> or however far you got.</p>
+</li>
+<li><p>After that you can install built files by running:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="Building-mraa-on-Yocto" class="article-heading"><a href="#Building-mraa-on-Yocto" class="headerlink" title="Building mraa on Yocto:"></a>Building mraa on Yocto:<a class="article-anchor" href="#Building-mraa-on-Yocto" aria-hidden="true"></a></h4><p>Intel mraa recipe is here <a target="_blank" rel="noopener" href="http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-iot-middleware/tree/recipes-devtools?h=daisy">http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-iot-middleware/tree/recipes-devtools?h=daisy</a> please add it to your building Yocto.</p>
 
               </div>
               <footer class="article-footer">

@@ -59,24 +59,28 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="The procedure to describes how to create Ubuntu image on LEC-PX30 with Industrial Pi-SMARC. The version of Ubuntu used is 18.04.3 LTS.  Recommended HardwareTo setup the build environment for Ubuntu im">
+  <meta name="description" content="The procedure to describes how to create Ubuntu image with SD Card on LEC-PX30 with Industrial Pi-SMARC. The version of Ubuntu used is 18.04.3 LTS.  Recommended HardwareTo setup the build environment">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How to Build Ubuntu">
 <meta property="og:url" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="The procedure to describes how to create Ubuntu image on LEC-PX30 with Industrial Pi-SMARC. The version of Ubuntu used is 18.04.3 LTS.  Recommended HardwareTo setup the build environment for Ubuntu im">
+<meta property="og:description" content="The procedure to describes how to create Ubuntu image with SD Card on LEC-PX30 with Industrial Pi-SMARC. The version of Ubuntu used is 18.04.3 LTS.  Recommended HardwareTo setup the build environment">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid.png">
-<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid_m.png">
-<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid_s.png">
-<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_parameter.png">
-<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_u-boot.png">
-<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/image-20200309102707320.png">
-<meta property="article:published_time" content="2020-03-09T02:32:09.419Z">
-<meta property="article:modified_time" content="2020-03-09T02:32:09.419Z">
+<meta property="og:image" content="c:/Users/ryanzj.huang/Desktop/IndustrialPi_SMARC_Release_Final_9Mar2020/Industrial%20Pi-SMARC.assets/build_menuconfig.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/SDFwTool.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/gparted1-1583897658803.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/gparted2-1583897706819.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/gparted3-1583903424202.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/gparted4.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/gparted5.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/gparted6.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/gparted3-1583903538497.png">
+<meta property="og:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/lsblk_output-1583903709858.png">
+<meta property="article:published_time" content="2020-03-12T03:28:06.762Z">
+<meta property="article:modified_time" content="2020-03-12T03:28:06.762Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/iot_pi/HowToBuildUbuntu.assets/ubuntu_uuid.png">
+<meta name="twitter:image" content="c:/Users/ryanzj.huang/Desktop/IndustrialPi_SMARC_Release_Final_9Mar2020/Industrial%20Pi-SMARC.assets/build_menuconfig.png">
   <!-- Google Analytics -->
   
 <script>
@@ -122,7 +126,7 @@
                 <h1 class="article-title" itemprop="name">How to Build Ubuntu</h1>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>The procedure to describes how to create Ubuntu image on <strong>LEC-PX30 with Industrial Pi-SMARC</strong>. The version of Ubuntu used is 18.04.3 LTS. </p>
+                <p>The procedure to describes how to create Ubuntu image with SD Card on <strong>LEC-PX30 with Industrial Pi-SMARC</strong>. The version of Ubuntu used is 18.04.3 LTS. </p>
 <h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Ubuntu image creation, a Linux host with the following configuration is recommended. A host machine with adequate processing power and disk space is ideal as the packages can run several GBs in size and the build can take a lot of time.</p>
 <ul>
 <li>Intel Core-i7 processor (&gt;= 4 cores)</li>
@@ -137,7 +141,18 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl</span></span><br><span class="line">zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev</span><br><span class="line">x11proto-core-dev libx11-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils</span><br><span class="line">xsltproc unzip device-tree-compiler liblz4-tool</span><br></pre></td></tr></table></figure>
 <p>Install buildroot dependencies.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install libfile-which-perl sed make binutils gcc g++ bash patch gzip</span><br><span class="line">bzip2 perl tar cpio python unzip rsync file bc libmpc3 git repo texinfo pkg-config cmake</span><br><span class="line">tree texinfo</span><br></pre></td></tr></table></figure>
-<h2 id="Preparing-Ubuntu-Root-File-System" class="article-heading"><a href="#Preparing-Ubuntu-Root-File-System" class="headerlink" title="Preparing Ubuntu Root File System"></a>Preparing Ubuntu Root File System<a class="article-anchor" href="#Preparing-Ubuntu-Root-File-System" aria-hidden="true"></a></h2><ol>
+<h2 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h2><p>The procedure is to replace buildroot rootfs image with Ubuntu’s one.</p>
+<ul>
+<li><p>In the beginning, we create Ubuntu root file system Image, as mentioned in “<strong>Step 1: Preparing Ubuntu Root File System</strong>“ section.</p>
+</li>
+<li><p>Also, to generate Buildroot SD Card Image, as mentioned in “<strong>Step 2: Generating Buildroot Image</strong>“ section.</p>
+</li>
+<li><p>Once Buildroot SD card is ready, we flash to the prepared SD card by using <strong>SD Firmware Tool</strong>, as mentioned in “<strong>Step 3: Flashing buildroot image to SD Card</strong>“ section</p>
+</li>
+<li><p>Final step is to replace the buidroot rootfs image with Ubuntu one, as mentioned in “<strong>Step 4: Replacing Buildroot Rootfs with Ubuntu’s one</strong>“</p>
+</li>
+</ul>
+<h2 id="Step-1-Preparing-Ubuntu-Root-File-System" class="article-heading"><a href="#Step-1-Preparing-Ubuntu-Root-File-System" class="headerlink" title="Step 1: Preparing Ubuntu Root File System"></a>Step 1: Preparing Ubuntu Root File System<a class="article-anchor" href="#Step-1-Preparing-Ubuntu-Root-File-System" aria-hidden="true"></a></h2><ol>
 <li><p>Install QEMU on the development host PC with Ubuntu OS</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install qemu-user-static</span><br></pre></td></tr></table></figure>
 </li>
@@ -150,7 +165,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo tar -xpf ubuntu-base-18.04.2-base-arm64.tar.gz -C $HOME&#x2F;temp</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="Configure-the-rootfs" class="article-heading"><a href="#Configure-the-rootfs" class="headerlink" title="Configure the rootfs"></a>Configure the rootfs<a class="article-anchor" href="#Configure-the-rootfs" aria-hidden="true"></a></h2><ol>
+<h3 id="Configure-the-rootfs" class="article-heading"><a href="#Configure-the-rootfs" class="headerlink" title="Configure the rootfs"></a>Configure the rootfs<a class="article-anchor" href="#Configure-the-rootfs" aria-hidden="true"></a></h3><ol>
 <li><p>Get your network ready:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp -b &#x2F;etc&#x2F;resolv.conf $HOME&#x2F;temp&#x2F;etc&#x2F;resolv.conf</span><br></pre></td></tr></table></figure>
 </li>
@@ -187,7 +202,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ exit</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="Add-I-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-O-Drivers-to-Rootfs" class="headerlink" title="Add I/O Drivers to Rootfs"></a>Add I/O Drivers to Rootfs<a class="article-anchor" href="#Add-I-O-Drivers-to-Rootfs" aria-hidden="true"></a></h2><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="Ethernet &amp; CAN Bus"></a>Ethernet &amp; CAN Bus<a class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
+<h3 id="Add-I-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-O-Drivers-to-Rootfs" class="headerlink" title="Add I/O Drivers to Rootfs"></a>Add I/O Drivers to Rootfs<a class="article-anchor" href="#Add-I-O-Drivers-to-Rootfs" aria-hidden="true"></a></h3><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="- Ethernet &amp; CAN Bus"></a>- Ethernet &amp; CAN Bus<a class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
 <li><p>Create a directory to copy the Ethernet and CAN kernel modules</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir $HOME&#x2F;temp&#x2F;home&#x2F;adlink&#x2F;rockchip_test</span><br></pre></td></tr></table></figure>
 </li>
@@ -201,12 +216,12 @@
 <p> <strong>Note:</strong> <a target="_blank" rel="noopener" href="https://wiki.ubuntu.com/Netplan">Netplan</a> enables easily configuring networking on a system via YAML files. Netplan processes the YAML and generates the required configurations for either NetworkManager or systemd-network the system’s renderer. Netplan <a target="_blank" rel="noopener" href="http://blog.cyphermox.net/2017/06/netplan-by-default-in-1710.html">replaced ifupdown</a> as the default configuration utility starting with Ubuntu 17.10 Artful. </p>
 </li>
 </ol>
-<h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="Audio"></a>Audio<a class="article-anchor" href="#Audio" aria-hidden="true"></a></h4><ol>
+<h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="- Audio"></a>- Audio<a class="article-anchor" href="#Audio" aria-hidden="true"></a></h4><ol>
 <li><p>Please click <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/asound.state">here</a> to download <strong>asound.state</strong> file and copy to <code>/var/lib/alsa/</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp asound.state $HOME&#x2F;temp&#x2F;var&#x2F;lib&#x2F;alsa&#x2F;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="Enable-I-O-Interfaces" class="article-heading"><a href="#Enable-I-O-Interfaces" class="headerlink" title="Enable I/O Interfaces"></a>Enable I/O Interfaces<a class="article-anchor" href="#Enable-I-O-Interfaces" aria-hidden="true"></a></h4><ol>
+<h4 id="Enable-I-O-Interfaces" class="article-heading"><a href="#Enable-I-O-Interfaces" class="headerlink" title="- Enable I/O Interfaces"></a>- Enable I/O Interfaces<a class="article-anchor" href="#Enable-I-O-Interfaces" aria-hidden="true"></a></h4><ol>
 <li><p>Please click <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Load.sh">here</a> to download and copy <strong>Load.sh</strong> file to the <code>rockchip_test</code>folder. </p>
 <p><strong>Note</strong>: it is shell script to insert modules on every reboot </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp Load.sh $HOME&#x2F;temp&#x2F;home&#x2F;adlink&#x2F;rockchip_test&#x2F;Load.sh</span><br></pre></td></tr></table></figure>
@@ -221,12 +236,12 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo chmod +x $HOME&#x2F;temp&#x2F;etc&#x2F;rc.local</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="Adding MRAA"></a>Adding MRAA<a class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4><ol>
+<h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="- Adding MRAA"></a>- Adding MRAA<a class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4><ol>
 <li><p>Download the <code>adlink-mraa-master.tar</code> file from <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/adlink-mraa-master.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir $HOME&#x2F;mraa</span><br><span class="line">$ tar -xvf adlink-mraa-master.tar -C $HOME&#x2F;mraa&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;bin&#x2F;* $HOME&#x2F;temp&#x2F;usr&#x2F;bin&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;include&#x2F;* $HOME&#x2F;temp&#x2F;usr&#x2F;include&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;lib&#x2F;libmraa.so* $HOME&#x2F;temp&#x2F;usr&#x2F;lib&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;lib&#x2F;pkgconfig&#x2F;mraa.pc $HOME&#x2F;temp&#x2F;usr&#x2F;lib&#x2F;pkgconfig&#x2F;</span><br><span class="line">$ sudo cp -r $HOME&#x2F;mraa&#x2F;usr&#x2F;share&#x2F;* $HOME&#x2F;temp&#x2F;usr&#x2F;share&#x2F;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="Make-the-Root-File-System" class="article-heading"><a href="#Make-the-Root-File-System" class="headerlink" title="Make the Root File System"></a>Make the Root File System<a class="article-anchor" href="#Make-the-Root-File-System" aria-hidden="true"></a></h2><p>Execute the commands below to make the rootfs.img. Notice that you need change the “count” value according to the size of the “temp” folder.</p>
+<h3 id="Make-the-Root-File-System" class="article-heading"><a href="#Make-the-Root-File-System" class="headerlink" title="Make the Root File System"></a>Make the Root File System<a class="article-anchor" href="#Make-the-Root-File-System" aria-hidden="true"></a></h3><p>Execute the commands below to make the rootfs.img. Notice that you need change the “count” value according to the size of the “temp” folder.</p>
 <p>Below command will create new rootfs.img file of size 7.4 GB (6.9 GB)</p>
 <pre><code>$ dd if=/dev/zero of=rootfs.img bs=1M count=7065 status=progress &amp;&amp; sync
 $ sudo mkfs.ext4 rootfs.img
@@ -236,55 +251,92 @@ $ sudo cp -rfp $HOME/temp/*  rootfs/
 $ sudo umount rootfs/
 $ e2fsck -p -f rootfs.img
 </code></pre><p> The final root files system rootfs.img is ready.</p>
-<h2 id="Adding-RFS-Image-to-Buildroot" class="article-heading"><a href="#Adding-RFS-Image-to-Buildroot" class="headerlink" title="Adding RFS Image to Buildroot"></a>Adding RFS Image to Buildroot<a class="article-anchor" href="#Adding-RFS-Image-to-Buildroot" aria-hidden="true"></a></h2><p>To add the created root file system image to LEC-PX30 Buildroot Linux, follow the procedure below:</p>
-<p>Before start to compile Buildroot, please Install the required packages on the development host PC.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install repo git-core gitk git-gui gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler gcc-aarch64-linux-gnu mtools parted libudev-dev libusb-1.0-0-dev python-linaro-image-tools linaro-image-tools autoconf autotools-dev libsigsegv2 m4 intltool libdrm-dev curl sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio python unzip rsync file bc wget libncurses5 libqt4-dev libglib2.0-dev libgtk2.0-dev libglade2-dev cvs git mercurial rsync openssh-client subversion asciidoc w3m dblatex graphviz python-matplotlib libc6:i386 libssl-dev texinfo liblz4-tool genext2fs lib32stdc++6</span><br></pre></td></tr></table></figure>
+<h2 id="Step-2-Generating-Buildroot-SD-card-Image" class="article-heading"><a href="#Step-2-Generating-Buildroot-SD-card-Image" class="headerlink" title="Step 2: Generating Buildroot SD card Image"></a>Step 2: <strong>Generating Buildroot SD card Image</strong><a class="article-anchor" href="#Step-2-Generating-Buildroot-SD-card-Image" aria-hidden="true"></a></h2><p>Download <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/v1.0.8-20200309/px30_buildroot_es2_sdk_20200309.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
+<p><strong>Note</strong>: Use <code>iPIsmarc-es2</code> branch and root for Creating Custom Images for SD Card Creating Custom Images for SD Card Building. Use <code>git branch</code> command under <strong>px30_buildroot/kernel</strong> to check the branch version.</p>
+<p>Change directory to px30_buildroot.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> px30_buildroot</span></span><br></pre></td></tr></table></figure>
+<p>Run build script.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ./build.sh</span></span><br></pre></td></tr></table></figure>
+<p>After you run “./build.sh”, a menuconfig screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
+<p><img src="C:/Users/ryanzj.huang/Desktop/IndustrialPi_SMARC_Release_Final_9Mar2020/Industrial Pi-SMARC.assets/build_menuconfig.png" style="zoom:50%;"></p>
+<p>The image will be generated as <strong>“update.img”</strong> under rockdev folder and will be used in SD Card.</p>
+<h2 id="Step-3-Flashing-buildroot-image-to-SD-Card" class="article-heading"><a href="#Step-3-Flashing-buildroot-image-to-SD-Card" class="headerlink" title="Step 3: Flashing buildroot image to SD Card"></a>Step 3: <strong>Flashing buildroot image to SD Card</strong><a class="article-anchor" href="#Step-3-Flashing-buildroot-image-to-SD-Card" aria-hidden="true"></a></h2><p>Flash image (generated in Step2) to the prepared SD card by using <strong>SD Firmware Tool</strong> (this tool is executed on Windows environment)</p>
+<p><strong>Note:</strong> Before going to flash image to SD card, format it. The size should be at least 8 Gb.</p>
+<ul>
+<li>Download the SD Firmware Tool from <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Tools/SDDiskTool_v1.6.rar">SD Firmware Tool Download Link</a></li>
+<li>Use <strong>SD Firmware Tool</strong> to prepare a bootable SD card. </li>
+<li>Run <strong>SD Firmware Tool</strong>  as a administrator.</li>
+<li>Select “Removable Disk” as SD card.  Choose “Function Mode” as SD boot. Load the SD card image as “Firmware” as shown below.</li>
+</ul>
+<p><img src="HowToBuildUbuntu.assets/SDFwTool.png" alt="1583303411226"></p>
+<ul>
+<li><p>Select “Create” to prepare SD card.</p>
+</li>
+<li><p>It will prompt user that data will be lost. Select “Yes” to continue.</p>
+</li>
+</ul>
+<h2 id="Step-4-Replacing-Buildroot-Rootfs-with-Ubuntu’s-one" class="article-heading"><a href="#Step-4-Replacing-Buildroot-Rootfs-with-Ubuntu’s-one" class="headerlink" title="Step 4: Replacing Buildroot Rootfs with Ubuntu’s one"></a>Step 4: Replacing Buildroot Rootfs with Ubuntu’s one<a class="article-anchor" href="#Step-4-Replacing-Buildroot-Rootfs-with-Ubuntu’s-one" aria-hidden="true"></a></h2><p>After finish step 3, get your SD card to connect to the development Linux Host PC .</p>
 <ol>
-<li><p>Download <a target="_blank" rel="noopener" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/v1.0.8-20200125/px30_buildroot_es2_sdk_20200125.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
-<p><strong>Note</strong>: use <code>iPIsmarc-es2</code> branch and root for the building. use<code>git branch</code> command under <strong>px30_buildroot/kernel</strong> to check the branch version.</p>
+<li><p>Unmount the mounted partitions</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo umount &#x2F;dev&#x2F;sdc*</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> In our case, `/dev/sdc is SD card device name</p>
 </li>
-<li><p>Change directory to px30_buildroot.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd px30_buildroot</span><br></pre></td></tr></table></figure>
+<li><p>Run <strong>GParted</strong> by using command line</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo gparted</span><br></pre></td></tr></table></figure>
+<p><strong>Note</strong>: GParted is a free partition editor for graphically managing your disk partitions. Please check <a target="_blank" rel="noopener" href="https://gparted.org/index.php">this link</a>.  </p>
 </li>
-<li><p>Create a temporary directory.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir ubunturootfs</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Copy the created rootfs.img to ubunturootfs.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cp &lt;path_to_ubuntu_rootfs&gt;&#x2F;rootfs.img ubunturootfs</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Create a <strong>parameter-ubuntu.txt</strong> file under device/rockchip/px30 folder.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cp device&#x2F;rockchip&#x2F;px30&#x2F;parameter-buildroot.txt device&#x2F;rockchip&#x2F;px30&#x2F;parameter-ubuntu.txt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Change directory to ubunturootfs folder and to check UUID of rootfs image, run the command below.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ file ubunturootfs&#x2F;rootfs.img</span><br></pre></td></tr></table></figure>
-<p><img align="center" src="HowToBuildUbuntu.assets/ubuntu_uuid.png"></p>
-</li>
-<li><p>Modify UUID you have in<code>parameter-ubuntu.txt</code> file</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ vi device&#x2F;rockchip&#x2F;px30&#x2F;parameter-ubuntu.txt</span><br></pre></td></tr></table></figure>
-<p> <img src="HowToBuildUbuntu.assets/ubuntu_uuid_m.png" alt="img"></p>
-<p>Now, modify the rootfs size and alter the user data starting address as per requirement. In the screenshot below, we are changing rootfs size to 7GB.<img src="HowToBuildUbuntu.assets/ubuntu_uuid_s.png" alt="img"></p>
-</li>
-<li><p>Open <code>BoardConfig_open.mk</code> file and change the path for <code>parameter-ubuntu.txt</code> and <code>rootfs.img</code> files.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vi device&#x2F;rockchip&#x2F;px30&#x2F;BoardConfig_open.mk</span><br></pre></td></tr></table></figure>
-<p> <img src="HowToBuildUbuntu.assets/ubuntu_parameter.png" alt="img"></p>
-</li>
-<li><p>Open <code>rk3326.dtsi</code> file and add new part UUID or device partition. In the screenshot below, we have added <code>/dev/mmcblk1p8 partition</code>.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vi kernel&#x2F;arch&#x2F;arm64&#x2F;boot&#x2F;dts&#x2F;rockchip&#x2F;rk3326-linux.dtsi</span><br></pre></td></tr></table></figure>
-<p><img src="HowToBuildUbuntu.assets/ubuntu_u-boot.png" alt="img"></p>
-</li>
-<li><p>Change directory to <code>px30_buildroot</code></p>
-   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd px30_buildroot</span><br></pre></td></tr></table></figure>
+<li><p>Select SD card as highlighted in above corner in below picture<img src="HowToBuildUbuntu.assets/gparted1-1583897658803.png" alt="gparted1"></p>
 </li>
 </ol>
-<ol start="11">
-<li><p>Run build.sh</p>
-   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;build.sh</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>Select partition 9 and give right click, then select delete<img src="HowToBuildUbuntu.assets/gparted2-1583897706819.png" alt="gparted2"></li>
+</ol>
+<ol start="5">
+<li><p>Save the changes and select apply</p>
+<p><img src="HowToBuildUbuntu.assets/gparted3-1583903424202.png" alt="gparted3"></p>
 </li>
-<li><p>After you run “./build.sh”, a menuconfig screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
-<p><img src="HowToBuildUbuntu.assets/image-20200309102707320.png" alt="image-20200309102707320"></p>
-<p><strong>Note:</strong> The image will be generated as <strong>“update.img”</strong> under rockdev folder.</p>
+</ol>
+<ol start="6">
+<li><p>After changes are applied, select close.</p>
+<p><img src="HowToBuildUbuntu.assets/gparted4.png" alt="gparted4"></p>
 </li>
-<li><p>Please refer to <a target="_blank" rel="noopener" href="https://ipi.wiki/iot_pi/HowToFlashImage.html">here</a> to guide you how to flash Ubuntu Image to SD card.</p>
+</ol>
+<ol start="7">
+<li><p>Select the root fs partition and select resize option above. Partition 8 (/dev/sdc8) is the rootfs partition in below picture.</p>
+<p><img src="HowToBuildUbuntu.assets/gparted5.png" alt="gparted5"></p>
+</li>
+</ol>
+<ol start="8">
+<li><p>Increase the size and select Resize/Move option</p>
+<p><img src="HowToBuildUbuntu.assets/gparted6.png" alt="gparted6"></p>
+</li>
+<li><p>Save the changes and select apply</p>
+<p><img src="HowToBuildUbuntu.assets/gparted3-1583903538497.png" alt="gparted3"></p>
+</li>
+</ol>
+<ol start="10">
+<li><p>Close the GParted and eject SD card. Also connect your SD Card to the development Linux Host PC.</p>
+</li>
+<li><p>Run <strong>lsblk</strong> command to get the path for mounted rootfs partition</p>
+<p><img src="HowToBuildUbuntu.assets/lsblk_output-1583903709858.png" alt="lsblk_output"></p>
+</li>
+</ol>
+<ol start="12">
+<li><p>Remove the existing contents as this file system is the default build root file system.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo rm -rf &lt;mount_path&gt;&#x2F;*</span><br><span class="line">$ sync</span><br></pre></td></tr></table></figure>
+<p>For example, the required partition is <strong>sdc8</strong> here with path <strong>/media/nhcpc20011/ac09cb0f-0d9b-4441-902c-bf48b1f10127/</strong></p>
+</li>
+</ol>
+<ol start="13">
+<li><p>Create a temporary directory and mount the <strong>rootfs.img</strong>, which is prepared at <strong>Step 1: Preparing Ubuntu Root File System</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir $HOME&#x2F;sd_temp</span><br><span class="line">$ sudo mount rootfs.img $HOME&#x2F;sd_temp</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="14">
+<li><p>Run the following commands to copy the contents of the ubuntu rootfs.img to the SD card.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo cp -rfp $HOME&#x2F;sd_temp&#x2F;* &lt;mount_path&gt;&#x2F;</span><br><span class="line">$ sync</span><br><span class="line">$ sudo umount $HOME&#x2F;sd_temp</span><br></pre></td></tr></table></figure>
+<p>Eject the SD card. You can directly insert SD card and power on the system to boot using the SD card.</p>
+<p><strong>Note:</strong> The first boot may take over 5 minutes for the desktop screen to appear.</p>
 </li>
 </ol>
 
