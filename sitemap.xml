@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
+    
+    <lastmod>2020-03-20T03:31:46.763Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/iot_pi/HowToBuildUbuntu.html</loc>
     
-    <lastmod>2020-03-12T15:51:05.160Z</lastmod>
+    <lastmod>2020-03-13T09:11:18.189Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
     
     <lastmod>2020-03-12T02:43:43.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
-    
-    <lastmod>2020-03-12T02:43:31.808Z</lastmod>
     
   </url>
   
@@ -100,6 +100,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/neuron_pi/programming_tutorial.html</loc>
+    
+    <lastmod>2020-02-24T06:39:03.249Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/neuron_pi/migration_guide.html</loc>
     
     <lastmod>2020-02-24T06:39:03.249Z</lastmod>
@@ -121,14 +128,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/programming_tutorial.html</loc>
-    
-    <lastmod>2020-02-24T06:39:03.249Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/neuron_pi/cyclonedds.html</loc>
+    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
     
     <lastmod>2020-02-24T06:39:03.234Z</lastmod>
     
@@ -142,21 +142,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
-    
-    <lastmod>2020-02-24T06:39:03.234Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/neuron_pi/SMARCModuleOverview.html</loc>
-    
-    <lastmod>2020-02-24T06:39:03.234Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
+    <loc>http://yoursite.com/neuron_pi/cyclonedds.html</loc>
     
     <lastmod>2020-02-24T06:39:03.234Z</lastmod>
     
@@ -170,6 +156,20 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
+    
+    <lastmod>2020-02-24T06:39:03.234Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/neuron_pi/SMARCModuleOverview.html</loc>
+    
+    <lastmod>2020-02-24T06:39:03.234Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/iot_pi/UnBoxing.html</loc>
     
     <lastmod>2020-02-24T06:39:03.218Z</lastmod>
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToBuildUboot.html</loc>
+    <loc>http://yoursite.com/index.html</loc>
     
     <lastmod>2020-02-24T06:39:03.187Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/index.html</loc>
+    <loc>http://yoursite.com/iot_pi/HowToBuildUboot.html</loc>
     
     <lastmod>2020-02-24T06:39:03.187Z</lastmod>
     
