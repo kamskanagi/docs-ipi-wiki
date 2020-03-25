@@ -2,30 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
-    
-    <lastmod>2020-03-20T03:31:46.763Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/iot_pi/HowToBuildUbuntu.html</loc>
     
-    <lastmod>2020-03-13T09:11:18.189Z</lastmod>
+    <lastmod>2020-03-25T06:38:32.824Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
     
-    <lastmod>2020-03-12T02:43:43.798Z</lastmod>
+    <lastmod>2020-03-25T06:38:20.262Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/HowToSetup.html</loc>
+    
+    <lastmod>2020-03-25T06:38:14.705Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/UnBoxing.html</loc>
+    
+    <lastmod>2020-03-25T06:36:58.637Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/iot_pi/HowToFlashImage.html</loc>
     
-    <lastmod>2020-03-10T05:16:05.789Z</lastmod>
+    <lastmod>2020-03-25T06:36:58.634Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
+    
+    <lastmod>2020-03-20T09:32:09.012Z</lastmod>
     
   </url>
   
@@ -61,13 +75,6 @@
     <loc>http://yoursite.com/iot_pi/HowToFlashYoctoImage.html</loc>
     
     <lastmod>2020-03-02T05:10:41.218Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToSetup.html</loc>
-    
-    <lastmod>2020-02-27T06:56:33.285Z</lastmod>
     
   </url>
   
@@ -114,13 +121,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
-    
-    <lastmod>2020-02-24T06:39:03.249Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/neuron_pi/index.html</loc>
     
     <lastmod>2020-02-24T06:39:03.249Z</lastmod>
@@ -128,9 +128,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
+    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
     
-    <lastmod>2020-02-24T06:39:03.234Z</lastmod>
+    <lastmod>2020-02-24T06:39:03.249Z</lastmod>
     
   </url>
   
@@ -170,9 +170,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/UnBoxing.html</loc>
+    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
     
-    <lastmod>2020-02-24T06:39:03.218Z</lastmod>
+    <lastmod>2020-02-24T06:39:03.234Z</lastmod>
     
   </url>
   
