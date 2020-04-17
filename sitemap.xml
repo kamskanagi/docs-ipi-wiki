@@ -9,13 +9,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/ros_dotfiles.html</loc>
-    
-    <lastmod>2020-04-17T07:10:07.515Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/neuron_pi/ros_domain_id.html</loc>
     
     <lastmod>2020-04-17T07:10:07.515Z</lastmod>
@@ -23,14 +16,21 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/programming_tutorial.html</loc>
+    <loc>http://yoursite.com/neuron_pi/ros_dotfiles.html</loc>
+    
+    <lastmod>2020-04-17T07:10:07.515Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
     
     <lastmod>2020-04-17T07:10:07.509Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
+    <loc>http://yoursite.com/neuron_pi/programming_tutorial.html</loc>
     
     <lastmod>2020-04-17T07:10:07.509Z</lastmod>
     
@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
+    <loc>http://yoursite.com/neuron_pi/cyclonedds.html</loc>
     
     <lastmod>2020-04-17T07:10:07.498Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/cyclonedds.html</loc>
+    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
     
     <lastmod>2020-04-17T07:10:07.498Z</lastmod>
     
