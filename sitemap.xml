@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
+    
+    <lastmod>2020-04-20T07:07:18.202Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/neuron_pi/verify_turtlesim.html</loc>
     
     <lastmod>2020-04-17T09:39:42.260Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/install_ros.html</loc>
+    <loc>http://yoursite.com/neuron_pi/index.html</loc>
     
     <lastmod>2020-04-17T09:39:42.224Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/index.html</loc>
+    <loc>http://yoursite.com/neuron_pi/install_ros.html</loc>
     
     <lastmod>2020-04-17T09:39:42.224Z</lastmod>
     
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/SMARCModuleOverview.html</loc>
+    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
     
     <lastmod>2020-04-17T09:39:42.216Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
+    <loc>http://yoursite.com/neuron_pi/SMARCModuleOverview.html</loc>
     
     <lastmod>2020-04-17T09:39:42.216Z</lastmod>
     
@@ -96,13 +103,6 @@
     <loc>http://yoursite.com/iot_pi/index.html</loc>
     
     <lastmod>2020-04-17T09:39:42.216Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
-    
-    <lastmod>2020-04-17T09:39:42.205Z</lastmod>
     
   </url>
   
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
+    <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
     
     <lastmod>2020-04-17T09:39:42.168Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
+    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
     
     <lastmod>2020-04-17T09:39:42.168Z</lastmod>
     
