@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/iot_pi/HowToBuildUbuntu.html</loc>
+    
+    <lastmod>2020-04-23T03:02:32.528Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
     
-    <lastmod>2020-04-20T07:07:18.202Z</lastmod>
+    <lastmod>2020-04-23T02:30:33.464Z</lastmod>
     
   </url>
   
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/ros_domain_id.html</loc>
+    <loc>http://yoursite.com/neuron_pi/ros_dotfiles.html</loc>
     
     <lastmod>2020-04-17T09:39:42.252Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/ros_dotfiles.html</loc>
+    <loc>http://yoursite.com/neuron_pi/ros_domain_id.html</loc>
     
     <lastmod>2020-04-17T09:39:42.252Z</lastmod>
     
@@ -51,13 +58,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/index.html</loc>
-    
-    <lastmod>2020-04-17T09:39:42.224Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/neuron_pi/install_ros.html</loc>
     
     <lastmod>2020-04-17T09:39:42.224Z</lastmod>
@@ -65,9 +65,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
+    <loc>http://yoursite.com/neuron_pi/index.html</loc>
     
-    <lastmod>2020-04-17T09:39:42.220Z</lastmod>
+    <lastmod>2020-04-17T09:39:42.224Z</lastmod>
     
   </url>
   
@@ -79,9 +79,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
+    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
     
-    <lastmod>2020-04-17T09:39:42.216Z</lastmod>
+    <lastmod>2020-04-17T09:39:42.220Z</lastmod>
     
   </url>
   
@@ -93,7 +93,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/HowToInstallMRAA.html</loc>
+    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
     
     <lastmod>2020-04-17T09:39:42.216Z</lastmod>
     
@@ -101,6 +101,13 @@
   
   <url>
     <loc>http://yoursite.com/iot_pi/index.html</loc>
+    
+    <lastmod>2020-04-17T09:39:42.216Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/neuron_pi/HowToInstallMRAA.html</loc>
     
     <lastmod>2020-04-17T09:39:42.216Z</lastmod>
     
@@ -166,13 +173,6 @@
     <loc>http://yoursite.com/iot_pi/HowToBuildYocto.html</loc>
     
     <lastmod>2020-04-17T09:39:42.148Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToBuildUbuntu.html</loc>
-    
-    <lastmod>2020-04-17T09:39:42.144Z</lastmod>
     
   </url>
   
