@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
+    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
     
-    <lastmod>2020-04-24T08:56:22.550Z</lastmod>
+    <lastmod>2020-04-24T09:06:14.769Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
+    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
     
-    <lastmod>2020-04-24T08:55:34.671Z</lastmod>
+    <lastmod>2020-04-24T08:56:22.550Z</lastmod>
     
   </url>
   
@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
+    <loc>http://yoursite.com/neuron_pi/index.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/index.html</loc>
+    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/UnBoxing.html</loc>
+    <loc>http://yoursite.com/iot_pi/ModuleIntroduction.html</loc>
     
     <lastmod>2020-04-23T07:34:26.396Z</lastmod>
     
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/ModuleIntroduction.html</loc>
+    <loc>http://yoursite.com/iot_pi/UnBoxing.html</loc>
     
     <lastmod>2020-04-23T07:34:26.396Z</lastmod>
     
