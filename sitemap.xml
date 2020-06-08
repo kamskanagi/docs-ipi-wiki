@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/iot_pi/HowToFlashImage.html</loc>
+    
+    <lastmod>2020-06-08T08:32:27.814Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/SupportedOSList.html</loc>
+    
+    <lastmod>2020-06-08T08:31:56.679Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/AndroidImages.html</loc>
+    
+    <lastmod>2020-06-08T08:30:13.272Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/HowToSetup.html</loc>
+    
+    <lastmod>2020-05-21T07:28:36.880Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
+    
+    <lastmod>2020-05-20T15:10:25.806Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
+    
+    <lastmod>2020-05-20T15:05:20.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/UbuntuImages.html</loc>
+    
+    <lastmod>2020-05-19T07:45:27.362Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/iot_pi/HowToBuildDebian.html</loc>
     
     <lastmod>2020-05-08T09:51:25.883Z</lastmod>
@@ -19,41 +68,6 @@
     <loc>http://yoursite.com/iot_pi/UnBoxing.html</loc>
     
     <lastmod>2020-05-08T06:28:26.028Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/UbuntuImages.html</loc>
-    
-    <lastmod>2020-05-05T08:31:42.897Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/SupportedOSList.html</loc>
-    
-    <lastmod>2020-05-05T08:27:05.096Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
-    
-    <lastmod>2020-05-05T08:11:53.506Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
-    
-    <lastmod>2020-04-27T05:49:04.187Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToFlashImage.html</loc>
-    
-    <lastmod>2020-04-24T07:17:12.348Z</lastmod>
     
   </url>
   
@@ -93,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
+    <loc>http://yoursite.com/neuron_pi/index.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/index.html</loc>
+    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
@@ -114,13 +128,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/migration_guide.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/neuron_pi/cyclonedds.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
@@ -128,7 +135,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
+    <loc>http://yoursite.com/neuron_pi/migration_guide.html</loc>
+    
+    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/index.html</loc>
     
     <lastmod>2020-04-23T07:34:26.411Z</lastmod>
     
@@ -156,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/index.html</loc>
+    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
     
     <lastmod>2020-04-23T07:34:26.411Z</lastmod>
     
@@ -191,7 +205,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToSetup.html</loc>
+    <loc>http://yoursite.com/iot_pi/HowToFlashYoctoImage.html</loc>
     
     <lastmod>2020-04-23T07:34:26.380Z</lastmod>
     
@@ -199,13 +213,6 @@
   
   <url>
     <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToFlashYoctoImage.html</loc>
     
     <lastmod>2020-04-23T07:34:26.380Z</lastmod>
     
