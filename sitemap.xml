@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/iot_pi/UbuntuImages.html</loc>
+    
+    <lastmod>2020-06-08T08:53:56.657Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
+    
+    <lastmod>2020-06-08T08:53:50.618Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/AndroidImages.html</loc>
+    
+    <lastmod>2020-06-08T08:53:46.682Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
+    
+    <lastmod>2020-06-08T08:53:09.831Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/iot_pi/HowToFlashImage.html</loc>
     
     <lastmod>2020-06-08T08:32:27.814Z</lastmod>
@@ -16,37 +44,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/AndroidImages.html</loc>
-    
-    <lastmod>2020-06-08T08:30:13.272Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/iot_pi/HowToSetup.html</loc>
     
     <lastmod>2020-05-21T07:28:36.880Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
-    
-    <lastmod>2020-05-20T15:10:25.806Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
-    
-    <lastmod>2020-05-20T15:05:20.891Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/UbuntuImages.html</loc>
-    
-    <lastmod>2020-05-19T07:45:27.362Z</lastmod>
     
   </url>
   
