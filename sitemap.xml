@@ -2,30 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/iot_pi/UbuntuImages.html</loc>
+    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
     
-    <lastmod>2020-06-08T08:53:56.657Z</lastmod>
+    <lastmod>2020-07-16T02:12:58.969Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
+    <loc>http://yoursite.com/iot_pi/SupportedOSList.html</loc>
     
-    <lastmod>2020-06-08T08:53:50.618Z</lastmod>
+    <lastmod>2020-07-16T02:12:43.030Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/iot_pi/AndroidImages.html</loc>
     
-    <lastmod>2020-06-08T08:53:46.682Z</lastmod>
+    <lastmod>2020-07-15T07:19:51.992Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
     
-    <lastmod>2020-06-08T08:53:09.831Z</lastmod>
+    <lastmod>2020-06-29T06:47:21.334Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iot_pi/UbuntuImages.html</loc>
+    
+    <lastmod>2020-06-23T03:11:57.500Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/iot_pi/HowToFlashImage.html</loc>
     
     <lastmod>2020-06-08T08:32:27.814Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/SupportedOSList.html</loc>
-    
-    <lastmod>2020-06-08T08:31:56.679Z</lastmod>
     
   </url>
   
@@ -79,63 +79,63 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/verify_turtlesim.html</loc>
+    <loc>http://yoursite.com/roscube_pico/verify_turtlesim.html</loc>
     
     <lastmod>2020-04-23T07:34:26.446Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/ros_dotfiles.html</loc>
+    <loc>http://yoursite.com/roscube_pico/ros_dotfiles.html</loc>
     
     <lastmod>2020-04-23T07:34:26.443Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/ros_domain_id.html</loc>
+    <loc>http://yoursite.com/roscube_pico/ros_domain_id.html</loc>
     
     <lastmod>2020-04-23T07:34:26.443Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/programming_tutorial.html</loc>
+    <loc>http://yoursite.com/roscube_pico/programming_tutorial.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/index.html</loc>
+    <loc>http://yoursite.com/roscube_pico/index.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/reference.html</loc>
+    <loc>http://yoursite.com/roscube_pico/reference.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/install_ros.html</loc>
+    <loc>http://yoursite.com/roscube_pico/migration_guide.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/cyclonedds.html</loc>
+    <loc>http://yoursite.com/roscube_pico/install_ros.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/migration_guide.html</loc>
+    <loc>http://yoursite.com/roscube_pico/cyclonedds.html</loc>
     
     <lastmod>2020-04-23T07:34:26.427Z</lastmod>
     
@@ -149,28 +149,28 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/SMARCModuleOverview.html</loc>
+    <loc>http://yoursite.com/roscube_pico/HowToInstallMRAA.html</loc>
     
     <lastmod>2020-04-23T07:34:26.411Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/UserInterfaces.html</loc>
+    <loc>http://yoursite.com/roscube_pico/HowToSetup.html</loc>
     
     <lastmod>2020-04-23T07:34:26.411Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/HowToInstallMRAA.html</loc>
+    <loc>http://yoursite.com/roscube_pico/SMARCModuleOverview.html</loc>
     
     <lastmod>2020-04-23T07:34:26.411Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/neuron_pi/HowToSetup.html</loc>
+    <loc>http://yoursite.com/roscube_pico/UserInterfaces.html</loc>
     
     <lastmod>2020-04-23T07:34:26.411Z</lastmod>
     
@@ -184,6 +184,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
+    
+    <lastmod>2020-04-23T07:34:26.396Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/iot_pi/ModuleIntroduction.html</loc>
     
     <lastmod>2020-04-23T07:34:26.396Z</lastmod>
@@ -191,9 +198,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
+    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.396Z</lastmod>
+    <lastmod>2020-04-23T07:34:26.380Z</lastmod>
     
   </url>
   
@@ -212,16 +219,16 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
+    <loc>http://yoursite.com/iot_pi/HowToBuildYocto.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.380Z</lastmod>
+    <lastmod>2020-04-23T07:34:26.364Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToBuildYocto.html</loc>
+    <loc>http://yoursite.com/iot_pi/BlockDiagram.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.364Z</lastmod>
+    <lastmod>2020-04-23T07:34:26.333Z</lastmod>
     
   </url>
   
@@ -234,13 +241,6 @@
   
   <url>
     <loc>http://yoursite.com/iot_pi/HowToBuildUboot.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.333Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/BlockDiagram.html</loc>
     
     <lastmod>2020-04-23T07:34:26.333Z</lastmod>
     
