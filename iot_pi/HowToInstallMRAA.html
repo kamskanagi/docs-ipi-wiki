@@ -67,8 +67,8 @@
 <meta property="og:description" content="Eclipse Mraa (Libmraa) is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numbering matches the board that you">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/iot_pi/HowToInstallMRAA.assets/image-20191215174758939.png">
-<meta property="article:published_time" content="2020-04-24T07:12:27.282Z">
-<meta property="article:modified_time" content="2020-04-23T07:34:26.380Z">
+<meta property="article:published_time" content="2020-08-14T08:15:50.645Z">
+<meta property="article:modified_time" content="2020-08-14T08:15:50.645Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/iot_pi/HowToInstallMRAA.assets/image-20191215174758939.png">
@@ -128,7 +128,7 @@
 <h2 id="How-to-Build-amp-Install-MRAA-on-your-boards" class="article-heading"><a href="#How-to-Build-amp-Install-MRAA-on-your-boards" class="headerlink" title="How to Build &amp; Install MRAA on your boards:"></a>How to Build &amp; Install MRAA on your boards:<a class="article-anchor" href="#How-to-Build-amp-Install-MRAA-on-your-boards" aria-hidden="true"></a></h2><h4 id="Building-mraa-on-Ubuntu" class="article-heading"><a href="#Building-mraa-on-Ubuntu" class="headerlink" title="Building mraa on Ubuntu:"></a>Building mraa on Ubuntu:<a class="article-anchor" href="#Building-mraa-on-Ubuntu" aria-hidden="true"></a></h4><ol>
 <li><p>Build dependencies is required:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git build-essential python-dev nodejs-dev cmake libjson-c-dev python3-dev byacc</span><br></pre></td></tr></table></figure>
-<p>MRAA expects swig 3.0.5, but apt repository will install only swig 3.0. to install swig greater than 3.0.5. please follow the below instructions</p>
+<p>MRAA expects the minimum swig version is 3.0.5 and please follow the below instructions:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install automake libpcre3-dev</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;swig&#x2F;swig.git</span><br><span class="line">$ cd swig</span><br><span class="line">$ .&#x2F;autogen.sh</span><br><span class="line">$ .&#x2F;configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Basic build Steps:</p>
