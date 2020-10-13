@@ -2,261 +2,191 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/iot_pi/DebianImages.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToFlashImage.html</loc>
     
-    <lastmod>2020-07-16T02:12:58.969Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/SupportedOSList.html</loc>
-    
-    <lastmod>2020-07-16T02:12:43.030Z</lastmod>
+    <lastmod>2020-10-13T07:27:01.369Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/AndroidImages.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/CarrierIntroduction.html</loc>
     
-    <lastmod>2020-07-15T07:19:51.992Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/YoctoImages.html</loc>
-    
-    <lastmod>2020-06-29T06:47:21.334Z</lastmod>
+    <lastmod>2020-10-13T07:24:42.532Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/UbuntuImages.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/index.html</loc>
     
-    <lastmod>2020-06-23T03:11:57.500Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToFlashImage.html</loc>
-    
-    <lastmod>2020-06-08T08:32:27.814Z</lastmod>
+    <lastmod>2020-10-13T07:23:43.312Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToSetup.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/SemaPX30Features.html</loc>
     
-    <lastmod>2020-05-21T07:28:36.880Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToBuildDebian.html</loc>
-    
-    <lastmod>2020-05-08T09:51:25.883Z</lastmod>
+    <lastmod>2020-10-13T07:21:34.290Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToBuildUbuntu.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToSetup.html</loc>
     
-    <lastmod>2020-05-08T09:14:53.572Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/UnBoxing.html</loc>
-    
-    <lastmod>2020-05-08T06:28:26.028Z</lastmod>
+    <lastmod>2020-10-13T07:18:32.422Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/UserInterfaces.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
     
-    <lastmod>2020-04-24T07:15:16.725Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/roscube_pico/verify_turtlesim.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.446Z</lastmod>
+    <lastmod>2020-10-13T07:18:06.226Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/roscube_pico/ros_dotfiles.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/UserInterfaces.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.443Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/roscube_pico/ros_domain_id.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.443Z</lastmod>
+    <lastmod>2020-10-13T07:17:35.573Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/roscube_pico/programming_tutorial.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/ModuleIntroduction.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/roscube_pico/index.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
+    <lastmod>2020-10-13T06:57:27.256Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/roscube_pico/reference.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToInstallMRAAUPM.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/roscube_pico/migration_guide.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
+    <lastmod>2020-10-13T06:52:44.180Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/roscube_pico/install_ros.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/roscube_pico/cyclonedds.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.427Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.090Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/index.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.411Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/roscube_pico/HowToInstallMRAA.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.411Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.066Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/roscube_pico/HowToSetup.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/SupportedOSList.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.411Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/roscube_pico/SMARCModuleOverview.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.411Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.066Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/roscube_pico/UserInterfaces.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/PX30BootFlow.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.411Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/PinoutSummary.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.396Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.063Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/SMARCModuleOverview.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/MechanicalandThermal.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.396Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/ModuleIntroduction.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.396Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.059Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToInstallMRAA.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/MechanicalandThermal.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.380Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.045Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/HowToFlashYoctoImage.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildYocto.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToBuildYocto.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.364Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.045Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/iot_pi/BlockDiagram.html</loc>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/DebianImages.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.333Z</lastmod>
+    <lastmod>2020-10-13T02:45:34.016Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/BlockDiagram.html</loc>
+    
+    <lastmod>2020-10-13T02:45:34.005Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/AndroidImages.html</loc>
+    
+    <lastmod>2020-10-13T02:45:34.004Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/UbuntuImages.html</loc>
+    
+    <lastmod>2020-09-30T03:23:59.166Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/U-boot.html</loc>
+    
+    <lastmod>2020-09-14T06:33:13.635Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/PinoutSummary.html</loc>
+    
+    <lastmod>2020-08-28T18:05:34.323Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/UnBoxing.html</loc>
+    
+    <lastmod>2020-08-26T10:48:13.440Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    
+    <lastmod>2020-08-26T10:48:13.345Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/index.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.333Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/iot_pi/HowToBuildUboot.html</loc>
-    
-    <lastmod>2020-04-23T07:34:26.333Z</lastmod>
+    <lastmod>2020-08-26T10:48:13.311Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/news/2016/02/28/hexo-3-2-released/</loc>
     
-    <lastmod>2020-04-23T07:34:26.318Z</lastmod>
+    <lastmod>2020-08-26T10:48:13.297Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/404/index.html</loc>
     
-    <lastmod>2020-04-23T07:34:26.302Z</lastmod>
+    <lastmod>2020-08-26T10:48:13.282Z</lastmod>
     
   </url>
   

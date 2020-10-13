@@ -132,6 +132,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
+.wrapper {
+  zoom: 1;
+}
 .wrapper:before,
 .wrapper:after {
   content: "";
@@ -145,6 +148,10 @@ body {
     max-width: 3000px;
     margin: 0 auto;
   }
+}
+.inner,
+#article-toc-inner {
+  zoom: 1;
 }
 .inner:before,
 #article-toc-inner:before,
@@ -247,6 +254,8 @@ body {
   text-decoration: none;
   line-height: 50px;
   opacity: 1;
+  -ms-filter: none;
+  filter: none;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -261,6 +270,8 @@ body {
 }
 .main-nav-link:hover {
   opacity: 1;
+  -ms-filter: none;
+  filter: none;
   color: #1094e8;
 }
 #search-input-wrap {
@@ -277,6 +288,8 @@ body {
   padding-right: 0.5em;
   display: inline-block;
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
 }
 #search-input {
   background: none;
@@ -299,6 +312,8 @@ body {
 #lang-select-label {
   color: #fff;
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 50px;
 }
@@ -307,9 +322,13 @@ body {
 }
 #lang-select-label i {
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
 }
 #lang-select {
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   position: absolute;
   top: 0;
   left: 0;
@@ -369,6 +388,8 @@ body {
 #banner-start-command:before {
   content: "$";
   opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
   padding-right: 10px;
 }
 #banner-start-link {
@@ -518,12 +539,14 @@ body {
   font-family: "Source Code Pro", Monaco, Menlo, Consolas, monospace;
 }
 #sidebar {
-  width: 200px;
+  width: 250px;
   float: left;
   padding-bottom: 200px;
   padding-top: 20px;
   opacity: 0.8;
-  margin-left: -200px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  margin-left: -250px;
   display: none;
 }
 @media screen and (min-width: 769px) {
@@ -539,6 +562,17 @@ body {
   display: block;
   border-top: 0px solid #e3e3e3;
   line-height: 1;
+  margin-left: 20px;
+}
+.sidebar-text {
+  margin-top: 5px;
+  padding: 4px 0;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: block;
+  border-top: 0px solid #e3e3e3;
+  line-height: 1;
+  margin-left: 20px;
 }
 summary {
   display: block;
@@ -562,8 +596,8 @@ details[open] > summary::before {
   display: block;
   color: #444;
   text-decoration: none;
-  padding: 7px 0;
   margin-left: 20px;
+  margin-top: 10px;
   line-height: 1;
   position: relative;
   width: 100%;
@@ -573,7 +607,7 @@ details[open] > summary::before {
 }
 .sidebar-link.first,
 .toc-link.first {
-  padding-top: 20px;
+  padding-top: 5px;
 }
 .sidebar-link.current,
 .toc-link.current {
@@ -584,6 +618,7 @@ details[open] > summary::before {
   color: #1094e8;
 }
 #content {
+  zoom: 1;
   position: relative;
 }
 #content:before,
@@ -593,6 +628,9 @@ details[open] > summary::before {
 }
 #content:after {
   clear: both;
+}
+#content-inner {
+  zoom: 1;
 }
 #content-inner:before,
 #content-inner:after {
@@ -604,7 +642,7 @@ details[open] > summary::before {
 }
 @media screen and (min-width: 769px) {
   #content-inner {
-    margin-left: 250px;
+    margin-left: 300px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -612,6 +650,9 @@ details[open] > summary::before {
     float: right;
     width: 100%;
   }
+}
+.article-inner {
+  zoom: 1;
 }
 .article-inner:before,
 .article-inner:after {
@@ -623,7 +664,7 @@ details[open] > summary::before {
 }
 @media screen and (min-width: 769px) {
   .article-inner {
-    margin-right: 200px;
+    margin-right: 250px;
   }
 }
 .article {
@@ -639,9 +680,11 @@ details[open] > summary::before {
 #article-toc {
   display: none;
   float: right;
-  width: 200px;
-  margin-right: -200px;
+  width: 250px;
+  margin-right: -250px;
   opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
 }
 @media screen and (min-width: 769px) {
   #article-toc {
@@ -652,12 +695,12 @@ details[open] > summary::before {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 200px;
+  right: 250px;
 }
 #article-toc-inner {
   overflow-x: hidden;
   overflow-y: auto;
-  width: 200px;
+  width: 250px;
 }
 .fixed #article-toc-inner {
   position: fixed;
@@ -681,6 +724,7 @@ details[open] > summary::before {
   color: #1094e8;
 }
 .article-header {
+  zoom: 1;
   padding-bottom: 20px;
   border-bottom: 1px solid #e3e3e3;
 }
@@ -904,6 +948,7 @@ td {
   vertical-align: top;
 }
 .article-footer {
+  zoom: 1;
   margin: 1em 0;
   border-top: 1px solid #e3e3e3;
   text-align: center;
@@ -972,6 +1017,7 @@ td {
   }
 }
 #plugin-list-header {
+  zoom: 1;
   margin: 40px 0;
 }
 #plugin-list-header:before,
@@ -1086,6 +1132,7 @@ td {
   margin: 1em 0;
 }
 .plugin-tag-list {
+  zoom: 1;
   line-height: 1.3;
 }
 .plugin-tag-list:before,
@@ -1130,9 +1177,13 @@ td {
 .plugin-screenshot-img.lazyload,
 .plugin-screenshot-img.lazyloading {
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 .plugin-screenshot-img.lazyloaded {
   opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 .plugin-preview-link {
   position: absolute;
@@ -1144,6 +1195,8 @@ td {
   color: #fff;
   text-align: center;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   -webkit-transition: 0.15s;
   -moz-transition: 0.15s;
   -ms-transition: 0.15s;
@@ -1151,9 +1204,13 @@ td {
 }
 .plugin-preview-link:hover {
   opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 .plugin-preview-link:hover .fa {
   opacity: 1;
+  -ms-filter: none;
+  filter: none;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -1170,6 +1227,8 @@ td {
   width: 50px;
   height: 50px;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   -webkit-transform: scale(6);
   -moz-transform: scale(6);
   -ms-transform: scale(6);
@@ -1191,6 +1250,7 @@ td {
   padding-bottom: 40px;
 }
 .archive-post-link {
+  zoom: 1;
   display: block;
   color: #444;
   text-decoration: none;
@@ -1255,6 +1315,8 @@ td {
   height: 20px;
   margin: auto;
   opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
   cursor: pointer;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -1264,6 +1326,8 @@ td {
 #mobile-nav-toggle:active,
 .mobile-nav-on #mobile-nav-toggle {
   opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 @media screen and (min-width: 769px) {
   #mobile-nav-toggle {
@@ -1300,6 +1364,8 @@ td {
 }
 .mobile-nav-on .mobile-nav-toggle-bar:nth-child(2) {
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 .mobile-nav-toggle-bar:last-child {
   top: 18px;
@@ -1347,6 +1413,8 @@ td {
 }
 #mobile-lang-select-label i {
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
 }
 #mobile-lang-select-label span {
   padding-left: 8px;
@@ -1354,6 +1422,8 @@ td {
 #mobile-lang-select {
   -webkit-appearance: menulist-button;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   position: absolute;
   top: 0;
   left: 0;
@@ -1382,6 +1452,8 @@ td {
   height: 100%;
   background: #000;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   -webkit-transition: opacity 0.4s, -webkit-transform 0s 0.4s;
   -moz-transition: opacity 0.4s, -moz-transform 0s 0.4s;
   -ms-transition: opacity 0.4s, -ms-transform 0s 0.4s;
@@ -1390,6 +1462,8 @@ td {
 .mobile-nav-on #mobile-nav-dimmer {
   width: 100%;
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -1400,6 +1474,7 @@ td {
   transition: opacity 0.4s;
 }
 #footer {
+  zoom: 1;
   padding: 40px 0;
   color: rgba(255,255,255,0.6);
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1498,6 +1573,7 @@ pre code {
   padding: 0;
 }
 .highlight figcaption {
+  zoom: 1;
   margin: -5px 0 5px;
   font-size: 0.9em;
   color: #999;
