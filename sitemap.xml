@@ -2,192 +2,196 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToFlashImage.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
     
-    <lastmod>2020-10-13T07:27:01.369Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/CarrierIntroduction.html</loc>
-    
-    <lastmod>2020-10-13T07:24:42.532Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/index.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UserInterfaces.html</loc>
     
-    <lastmod>2020-10-13T07:23:43.312Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/SemaPX30Features.html</loc>
-    
-    <lastmod>2020-10-13T07:21:34.290Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToSetup.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UnBoxing.html</loc>
     
-    <lastmod>2020-10-13T07:18:32.422Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
-    
-    <lastmod>2020-10-13T07:18:06.226Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/UserInterfaces.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UbuntuImages.html</loc>
     
-    <lastmod>2020-10-13T07:17:35.573Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/ModuleIntroduction.html</loc>
-    
-    <lastmod>2020-10-13T06:57:27.256Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToInstallMRAAUPM.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SupportedOSList.html</loc>
     
-    <lastmod>2020-10-13T06:52:44.180Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
-    
-    <lastmod>2020-10-13T02:45:34.090Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/SMARCModuleOverview.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/U-boot.html</loc>
     
-    <lastmod>2020-10-13T02:45:34.066Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/SupportedOSList.html</loc>
-    
-    <lastmod>2020-10-13T02:45:34.066Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/PX30BootFlow.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
-    <lastmod>2020-10-13T02:45:34.063Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/MechanicalandThermal.html</loc>
-    
-    <lastmod>2020-10-13T02:45:34.059Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SemaPX30Features.html</loc>
     
-    <lastmod>2020-10-13T02:45:34.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildYocto.html</loc>
-    
-    <lastmod>2020-10-13T02:45:34.045Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/DebianImages.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/PinoutSummary.html</loc>
     
-    <lastmod>2020-10-13T02:45:34.016Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/BlockDiagram.html</loc>
-    
-    <lastmod>2020-10-13T02:45:34.005Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/AndroidImages.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/PX30BootFlow.html</loc>
     
-    <lastmod>2020-10-13T02:45:34.004Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/UbuntuImages.html</loc>
-    
-    <lastmod>2020-09-30T03:23:59.166Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/U-boot.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/ModuleIntroduction.html</loc>
     
-    <lastmod>2020-09-14T06:33:13.635Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/PinoutSummary.html</loc>
-    
-    <lastmod>2020-08-28T18:05:34.323Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/UnBoxing.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/MechanicalandThermal.html</loc>
     
-    <lastmod>2020-08-26T10:48:13.440Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
-    
-    <lastmod>2020-08-26T10:48:13.345Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/index.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToSetup.html</loc>
     
-    <lastmod>2020-08-26T10:48:13.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/news/2016/02/28/hexo-3-2-released/</loc>
-    
-    <lastmod>2020-08-26T10:48:13.297Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/404/index.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToInstallMRAAUPM.html</loc>
     
-    <lastmod>2020-08-26T10:48:13.282Z</lastmod>
+    <lastmod>2020-10-19</lastmod>
     
   </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToFlashImage.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildYocto.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/DebianImages.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/CarrierIntroduction.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/BlockDiagram.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/AndroidImages.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/index.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/index.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/404/index.html</loc>
+    
+    <lastmod>2020-10-19</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>http://example.com/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
   
 </urlset>
