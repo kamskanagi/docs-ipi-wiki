@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/iot_pi/SupportedOSList.html</loc>
+    
+    <lastmod>2020-11-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
     
     <lastmod>2020-11-20</lastmod>
@@ -38,13 +45,6 @@
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/U-boot.html</loc>
-    
-    <lastmod>2020-11-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/iot_pi/SupportedOSList.html</loc>
     
     <lastmod>2020-11-20</lastmod>
     
