@@ -76,8 +76,8 @@
 <meta property="og:image" content="https://docs.ipi.wiki/iot_pi/HowToBuildUbuntu.assets/gparted6.png">
 <meta property="og:image" content="https://docs.ipi.wiki/iot_pi/HowToBuildUbuntu.assets/gparted3-1583903538497.png">
 <meta property="og:image" content="https://docs.ipi.wiki/iot_pi/HowToBuildUbuntu.assets/lsblk_output-1583903709858.png">
-<meta property="article:published_time" content="2020-10-26T02:55:12.177Z">
-<meta property="article:modified_time" content="2020-10-26T02:55:12.177Z">
+<meta property="article:published_time" content="2020-11-20T02:39:02.183Z">
+<meta property="article:modified_time" content="2020-11-20T02:39:02.183Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/iot_pi/HowToBuildUbuntu.assets/image-20200309102707320.png">
@@ -104,10 +104,11 @@
     </h1>
     <nav id="main-nav">
       <a href="/smarc-ipi/" class="main-nav-link">Industrial Pi</a>
+	  <a href="https://www.ipi.wiki" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
     </nav>
 	<nav><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a></nav>
 	<nav><a href="https://www.ipi.wiki/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a></nav>
-	<nav><a href="https://www.ipi.wiki" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a></nav>
+	
 
 
     <a id="mobile-nav-toggle">
@@ -140,13 +141,10 @@
 </ul>
 <p>Update apt repositories list on your host machine.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br></pre></td></tr></table></figure>
-
 <p>Install kernel and u-boot dependencies.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl</span><br><span class="line">zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev</span><br><span class="line">x11proto-core-dev libx11-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils</span><br><span class="line">xsltproc unzip device-tree-compiler liblz4-tool libssl-dev</span><br></pre></td></tr></table></figure>
-
 <p>Install buildroot dependencies.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install libfile-which-perl sed make binutils gcc g++ bash patch gzip</span><br><span class="line">bzip2 perl tar cpio python unzip rsync file bc libmpc3 git repo texinfo pkg-config cmake</span><br><span class="line">tree texinfo</span><br></pre></td></tr></table></figure>
-
 
 
 <h2 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h2><p>The procedure below replaces the buildroot rootfs with the Debian one.</p>
@@ -159,115 +157,79 @@
 <p>These steps are detailed below.</p>
 <h2 id="Step-1-Preparing-Debian-Root-File-System" class="article-heading"><a href="#Step-1-Preparing-Debian-Root-File-System" class="headerlink" title="Step 1: Preparing Debian Root File System"></a>Step 1: Preparing Debian Root File System<a class="article-anchor" href="#Step-1-Preparing-Debian-Root-File-System" aria-hidden="true"></a></h2><ol>
 <li><p>Create a new working directory and change directory into it.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/px30</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/px30</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/px30</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/px30</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Create a rootfs directory.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir rootfs</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir rootfs</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Install debootsrap and it’s dependencies.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install debootstrap binfmt-support qemu-user-static</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo debootstrap --arch=arm64 --include=sudo,net-tools,isc-dhcp-client --foreign buster rootfs</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo debootstrap --arch=arm64 --include=sudo,net-tools,isc-dhcp-client --foreign buster rootfs</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Add required apt repositories to sources.list.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;printf &#x27;deb http://deb.debian.org/debian buster main contrib non-free\ndeb-src http://deb.debian.org/debian buster main contrib non-free\n\ndeb http://deb.debian.org/debian-security buster/updates main contrib non-free\ndeb-src http://deb.debian.org/debian-security buster/updates main contrib non-free\n\ndeb http://deb.debian.org/debian buster-updates main contrib non-free\ndeb-src http://deb.debian.org/debian buster-updates main contrib non-free\n\ndeb http://deb.debian.org/debian buster-backports main contrib non-free\ndeb-src http://deb.debian.org/debian buster-backports main contrib non-free\n&#x27; &gt; rootfs/etc/apt/sources.list&quot;</span></span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="Configure-the-Rootfs" class="article-heading"><a href="#Configure-the-Rootfs" class="headerlink" title="Configure the Rootfs"></a>Configure the Rootfs<a class="article-anchor" href="#Configure-the-Rootfs" aria-hidden="true"></a></h3><ol>
+<h3 id="Configure-the-Rootfs" class="article-heading"><a href="#Configure-the-Rootfs" class="headerlink" title="Configure the Rootfs"></a>Configure the Rootfs<a class="article-anchor" href="#Configure-the-Rootfs" aria-hidden="true"></a></h3></li>
 <li><p>Add host name to <code>/etc/hostname</code> </p>
 <p>​    Here is an example.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;adlink&#x27; &gt; rootfs/etc/hostname&quot;</span></span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;adlink&#x27; &gt; rootfs/etc/hostname&quot;</span></span></span><br></pre></td></tr></table></figure></li>
 <li><p>Add host entry in <code>/etc/hosts</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;printf &#x27;127.0.0.1\tlocalhost\n127.0.1.1\tadlink\n\n&#x27; &gt; rootfs/etc/hosts&quot;</span></span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;root::0:0:root:/root:/bin/bash&#x27; &gt; rootfs/etc/passwd&quot;</span></span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;root::0:0:root:/root:/bin/bash&#x27; &gt; rootfs/etc/passwd&quot;</span></span></span><br></pre></td></tr></table></figure></li>
 <li><p>Prepare QEMU</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo wget https://github.com/multiarch/qemu-user-static/releases/download/v4.2.0-6/qemu-aarch64-static -O rootfs/usr/bin/qemu-aarch64-static</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x rootfs/usr/bin/qemu-aarch64-static</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo wget https://github.com/multiarch/qemu-user-static/releases/download/v4.2.0-6/qemu-aarch64-static -O rootfs/usr/bin/qemu-aarch64-static</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x rootfs/usr/bin/qemu-aarch64-static</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Get your network ready</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp /etc/resolv.conf rootfs/etc/</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp /etc/resolv.conf rootfs/etc/</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Mount the proc sys dev file systems</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev dev/pts; <span class="keyword">do</span> sudo mount --<span class="built_in">bind</span> /<span class="variable">$f</span> rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev dev/pts; <span class="keyword">do</span> sudo mount --<span class="built_in">bind</span> /<span class="variable">$f</span> rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure></li>
 <li><p>Change root.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chroot rootfs /bin/bash</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chroot rootfs /bin/bash</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Add user name</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> /debootstrap/debootstrap --second-stage</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install sudo net-tools isc-dhcp-client</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adduser px30 (provide new password and name <span class="keyword">for</span> the user <span class="keyword">in</span> the prompt)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> usermod -a -G sudo px30</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> /debootstrap/debootstrap --second-stage</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install sudo net-tools isc-dhcp-client</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adduser px30 (provide new password and name <span class="keyword">for</span> the user <span class="keyword">in</span> the prompt)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> usermod -a -G sudo px30</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Install the required tools or utilities</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install vim git sudo net-tools ifupdown kmod iputils-ping man wget bash-completion alsa-utils apt-utils usbutils i2c-tools netplan.io vnc4server lm-sensors build-essential cmake  can-utils mesa-utils blueman locales </span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install vim git sudo net-tools ifupdown kmod iputils-ping man wget bash-completion alsa-utils apt-utils usbutils i2c-tools netplan.io vnc4server lm-sensors build-essential cmake  can-utils mesa-utils blueman locales</span> </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Configure locales</p>
 <p> You will be prompted through GUI menu to make certain selections such as those for date/time/region. Please make the appropriate selections and proceed.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> dpkg-reconfigure locales</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> dpkg-reconfigure locales</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Install xfce desktop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt install task-xfce-desktop</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt install task-xfce-desktop</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Exit from chroot</p>
  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sync</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">exit</span></span></span><br></pre></td></tr></table></figure>
-
 
 
 </li>
 </ol>
 <h3 id="Add-I-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-O-Drivers-to-Rootfs" class="headerlink" title="Add I/O Drivers to Rootfs"></a>Add I/O Drivers to Rootfs<a class="article-anchor" href="#Add-I-O-Drivers-to-Rootfs" aria-hidden="true"></a></h3><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="- Ethernet &amp; CAN Bus"></a>- Ethernet &amp; CAN Bus<a class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
 <li><p>Create a directory to copy the Ethernet and CAN kernel modules</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/Kernel-modules.zip">here</a> to download and copy <strong>smsc9500.ko, smscusbnet.ko and mcp25xxfd.ko kernel modules</strong> into rockchip_test folder from host PC.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp &lt;your_path&gt;/*.ko <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test/</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="- Audio"></a>- Audio<a class="article-anchor" href="#Audio" aria-hidden="true"></a></h4><ol>
+<h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="- Audio"></a>- Audio<a class="article-anchor" href="#Audio" aria-hidden="true"></a></h4></li>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/asound.zip">here</a> to download <strong>asound.state</strong> file and copy to <code>/var/lib/alsa/</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp asound.state <span class="variable">$HOME</span>/px30/rootfs/var/lib/alsa/</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="WiFi-Bluetooth" class="article-heading"><a href="#WiFi-Bluetooth" class="headerlink" title="- WiFi/Bluetooth"></a>- WiFi/Bluetooth<a class="article-anchor" href="#WiFi-Bluetooth" aria-hidden="true"></a></h4><ol>
+<h4 id="WiFi-Bluetooth" class="article-heading"><a href="#WiFi-Bluetooth" class="headerlink" title="- WiFi/Bluetooth"></a>- WiFi/Bluetooth<a class="article-anchor" href="#WiFi-Bluetooth" aria-hidden="true"></a></h4></li>
 <li><p>Download the <code>rtl_bt.zip</code> file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/rtl_bt.zip">here</a> and extract.</p>
 </li>
 <li><p>Copy the rtl_bt folder which has Bluetooth firmware to file system.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r rtl_bt/ <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r rtl_bt/ <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Unmount the mounted fie systems.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev/pts dev; <span class="keyword">do</span> sudo umount rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev/pts dev; <span class="keyword">do</span> sudo umount rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure></li>
 <li><p>Remove emulator and resolv.conf file.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo rm rootfs/usr/bin/qemu-aarch64-static rootfs/etc/resolv.conf</span></span><br></pre></td></tr></table></figure>
-
-</li>
+<h4 id="IMX219-camera" class="article-heading"><a href="#IMX219-camera" class="headerlink" title="- IMX219 camera"></a>- IMX219 camera<a class="article-anchor" href="#IMX219-camera" aria-hidden="true"></a></h4></li>
 </ol>
-<h4 id="IMX219-camera" class="article-heading"><a href="#IMX219-camera" class="headerlink" title="- IMX219 camera"></a>- IMX219 camera<a class="article-anchor" href="#IMX219-camera" aria-hidden="true"></a></h4><p>Download the imx219_camera.tar file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/imx219_camera.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
+<p>Download the imx219_camera.tar file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/imx219_camera.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/camera</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xvf imx219_camera.tar -C <span class="variable">$HOME</span>/camera/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/camera/usr/ <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/camera/etc <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm <span class="variable">$HOME</span>/px30/rootfs/lib/aarch64-linux-gnu/libm.so.6</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp <span class="variable">$HOME</span>/camera/libm.so.6 <span class="variable">$HOME</span>/px30/rootfs/lib/aarch64-linux-gnu/</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="Enable-I-O-Interfaces" class="article-heading"><a href="#Enable-I-O-Interfaces" class="headerlink" title="- Enable I/O Interfaces"></a>- Enable I/O Interfaces<a class="article-anchor" href="#Enable-I-O-Interfaces" aria-hidden="true"></a></h4><ol>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Load.zip">here</a> to download and copy <strong>Load.sh</strong> file to the <code>rockchip_test</code>folder.</p>
 <p><strong>Note</strong>: It is shell script to insert modules on every reboot</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp Load.sh <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp Load.sh <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Give execute permissions to script.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/Debian_rc_local.zip">here</a> to download and copy <strong>rc.local</strong> to <code>temp/etc/</code></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp rc.local <span class="variable">$HOME</span>/px30/rootfs/etc/</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp rc.local <span class="variable">$HOME</span>/px30/rootfs/etc/</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Give executable permissions.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x <span class="variable">$HOME</span>/px30/rootfs/etc/rc.local</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="- Adding MRAA"></a>- Adding MRAA<a class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4><ol>
+<h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="- Adding MRAA"></a>- Adding MRAA<a class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4></li>
 <li><p>Download the <code>adlink-mraa-master.tar</code> file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/adlink-mraa-master.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/rootfs/usr/lib/pkgconfig</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xvf adlink-mraa-master.tar -C <span class="variable">$HOME</span>/mraa/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/bin/* <span class="variable">$HOME</span>/px30/rootfs/usr/bin/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/include/* <span class="variable">$HOME</span>/px30/rootfs/usr/include/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/lib/libmraa.so* <span class="variable">$HOME</span>/px30/rootfs/usr/lib/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/lib/pkgconfig/mraa.pc <span class="variable">$HOME</span>/px30/rootfs/usr/lib/pkgconfig/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/share/* <span class="variable">$HOME</span>/px30/rootfs/usr/share/</span></span><br></pre></td></tr></table></figure>
-
 
 
 </li>
@@ -279,21 +241,18 @@
 
 
 
-
 </li>
 </ol>
 <h2 id="Step-2-Generating-Buildroot-SD-Card-Image" class="article-heading"><a href="#Step-2-Generating-Buildroot-SD-Card-Image" class="headerlink" title="Step 2: Generating Buildroot SD Card Image"></a>Step 2: <strong>Generating Buildroot SD Card Image</strong><a class="article-anchor" href="#Step-2-Generating-Buildroot-SD-Card-Image" aria-hidden="true"></a></h2><p>Download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/v1.0.8-20200413/px30_buildroot_es2_sdk_20200413.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
 <p><strong>Note</strong>: Use <code>iPIsmarc-es2</code> branch and root for creating custom images for SD card. Use <code>git branch</code> command under <strong>px30_buildroot/kernel</strong> to check the branch version.</p>
 <ol>
 <li><p>Change directory to px30_buildroot.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> px30_buildroot</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> px30_buildroot</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Run build script.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./build.sh</span></span><br></pre></td></tr></table></figure>
-
+<p>After you run “./build.sh”, a menuconfig screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
 </li>
 </ol>
-<p>After you run “./build.sh”, a menuconfig screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
 <p>If you dont see the menuconfig screen, install ncurses<br>$ yum install ncurses-devel ncurses</p>
 <p><img src="https://docs.ipi.wiki/iot_pi/HowToBuildUbuntu.assets/image-20200309102707320.png" alt="image-20200309102707320"></p>
 <p>The image will be generated as <strong>“update.img”</strong> under rockdev folder and will be used in SD Card.</p>
@@ -313,12 +272,10 @@
 <ol>
 <li><p>Unmount the mounted partitions</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo umount /dev/sdc*</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>Note:</strong> In our case, ‘/dev/sdc ‘ is SD card device name</p>
 </li>
 <li><p>Run <strong>GParted</strong> by using command line</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo gparted</span><br></pre></td></tr></table></figure>
-
 <p><strong>Note</strong>: GParted is a free partition editor for graphically managing your disk partitions. Please check <a target="_blank" rel="noopener external nofollow noreferrer" href="https://gparted.org/index.php">this link</a>.</p>
 </li>
 <li><p>Select SD card as highlighted in above corner in below picture<img src="https://docs.ipi.wiki/iot_pi/HowToBuildUbuntu.assets/gparted1-1583897658803.png" alt="gparted1"></p>
@@ -356,13 +313,11 @@
 <li>Remove the existing contents as this file system is the default build root file system.</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -rf &lt;mount_path&gt;/*</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sync</span></span><br></pre></td></tr></table></figure>
-
 <p>For example, the required partition is <strong>sdc8</strong> here with path <strong>/media/nhcpc20011/ac09cb0f-0d9b-4441-902c-bf48b1f10127/</strong></p>
 <ol start="13">
 <li>Run the following commands to copy the contents of the Debian rootfs.img to the SD card.</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -rfp <span class="variable">$HOME</span>/px30/rootfs/* &lt;mount_path&gt;/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sync</span></span><br></pre></td></tr></table></figure>
-
 <p>Eject the SD card. You can directly insert SD card and power on the system to boot using the SD card.</p>
 <p>After boot, login to <strong>px30</strong> user using password set in adduser command.</p>
 
