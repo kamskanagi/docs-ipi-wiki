@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/AndroidImages.html</loc>
+    
+    <lastmod>2020-12-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
+    
+    <lastmod>2020-12-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UbuntuImages.html</loc>
+    
+    <lastmod>2020-12-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/DebianImages.html</loc>
+    
+    <lastmod>2020-12-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SupportedOSList.html</loc>
     
     <lastmod>2020-12-21</lastmod>
@@ -16,20 +44,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/AndroidImages.html</loc>
-    
-    <lastmod>2020-12-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
-    
-    <lastmod>2020-12-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UserInterfaces.html</loc>
     
     <lastmod>2020-12-21</lastmod>
@@ -38,13 +52,6 @@
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UnBoxing.html</loc>
-    
-    <lastmod>2020-12-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UbuntuImages.html</loc>
     
     <lastmod>2020-12-21</lastmod>
     
@@ -142,13 +149,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/DebianImages.html</loc>
-    
-    <lastmod>2020-12-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/CarrierIntroduction.html</loc>
     
     <lastmod>2020-12-21</lastmod>
@@ -200,7 +200,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2020-12-21</lastmod>
+    <lastmod>2020-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
