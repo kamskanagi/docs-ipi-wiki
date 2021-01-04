@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UnBoxing.html</loc>
-    
-    <lastmod>2021-01-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/tutorial/index.html</loc>
     
     <lastmod>2021-01-04</lastmod>
@@ -17,6 +10,34 @@
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/ExampleHowto.html</loc>
+    
+    <lastmod>2021-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial6-HowToInstallRaspberryPiCameraModule.html</loc>
+    
+    <lastmod>2021-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial5-HowToFlashDebianImage.html</loc>
+    
+    <lastmod>2021-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial2-HowToFlashYoctoImage.html</loc>
+    
+    <lastmod>2021-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UnBoxing.html</loc>
     
     <lastmod>2021-01-04</lastmod>
     
@@ -51,20 +72,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial6-HowToInstallRaspberryPiCameraModule.html</loc>
-    
-    <lastmod>2021-01-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial5-HowToFlashDebianImage.html</loc>
-    
-    <lastmod>2021-01-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial4-HowToBuildUbuntu.html</loc>
     
     <lastmod>2021-01-04</lastmod>
@@ -73,13 +80,6 @@
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial3-HowToBuildDebian10LTS.html</loc>
-    
-    <lastmod>2021-01-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/examples&howto/Tutorial2-HowToFlashYoctoImage.html</loc>
     
     <lastmod>2021-01-04</lastmod>
     
