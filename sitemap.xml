@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
+    
+    <lastmod>2021-01-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    
+    <lastmod>2021-01-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
     
     <lastmod>2021-01-11</lastmod>
@@ -121,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
-    
-    <lastmod>2020-12-31</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UnBoxing.html</loc>
     
     <lastmod>2020-12-31</lastmod>
@@ -226,13 +233,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
-    
-    <lastmod>2020-12-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
     
     <lastmod>2020-12-21</lastmod>
@@ -291,7 +291,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-01-11</lastmod>
+    <lastmod>2021-01-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
