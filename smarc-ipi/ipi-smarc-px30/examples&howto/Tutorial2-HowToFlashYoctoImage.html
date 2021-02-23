@@ -2,6 +2,7 @@
 <html>
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="icon" href="https://xfii.b-cdn.net/uploads/i-pi-smarc/5ieu2go.jpg">
@@ -70,8 +71,8 @@
 <meta property="og:description" content="The detailed steps how to flash an Yocto image including u-boot, Linux kernel and file system to the SD Card.  The download link for the latest binary images which built by ADLINK if you would like">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc-ipi/ipi-smarc-px30/YoctoImages.assets/yocto_desktop.png">
-<meta property="article:published_time" content="2021-01-04T05:58:38.274Z">
-<meta property="article:modified_time" content="2021-01-04T05:58:38.274Z">
+<meta property="article:published_time" content="2021-02-23T05:35:10.378Z">
+<meta property="article:modified_time" content="2021-02-04T09:21:38.044Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/smarc-ipi/ipi-smarc-px30/YoctoImages.assets/yocto_desktop.png">
@@ -100,10 +101,11 @@
       <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
       <img src="https://xfii.b-cdn.net/uploads/i-pi-smarc/5ieu2go.jpg" class="img-fluid" style="height:27px;top: 8px;position: relative;/* display: inline-block; */" alt="">  </a>
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
-      <a href="/smarc-ipi/" class="main-nav-link">Industrial Pi</a><a href="/tutorial/" class="main-nav-link">Tutorials</a>    
+      <a href="/smarc-ipi/" class="main-nav-link">Industrial Pi</a><a href="/tutorial/" class="main-nav-link">Tutorials</a>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
-	<nav><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a></nav>
-	<nav><a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a></nav>
+
 	
 
 
@@ -151,7 +153,7 @@
               
             </div>
           </div>
-          <aside id="article-toc" role="navigation">
+          <aside id="article-toc" role="navigation" class="fixed">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Outline</strong>
               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you-will-see-using-ADLINK-image-with-xfce-desktop"><span class="toc-text">What you will see (using ADLINK image with xfce desktop)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Usernames-and-passwords"><span class="toc-text">Usernames and passwords</span></a></li></ol></li></ol>
@@ -183,10 +185,7 @@
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
       <a href="/smarc-ipi/" class="mobile-nav-link">Industrial Pi</a><a href="/tutorial/" class="mobile-nav-link">Tutorials</a>
-      <li class="mobile-nav-item">
-        <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
-		<a href="https://www.ipi.wiki" class="mobile-nav-link" rel="external" target="_itself">Home</a>
-      </li>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
       <strong class="mobile-nav-title"><details open ><summary>I-Pi SMARC PX30</summary><strong class="mobile-nav-text"><details ><summary>Getting Started</summary><a href="/smarc-ipi/ipi-smarc-px30/UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="/smarc-ipi/ipi-smarc-px30/UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="/smarc-ipi/ipi-smarc-px30/HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-text"><details ><summary>Hardware Documentation</summary><a href="/smarc-ipi/ipi-smarc-px30/ModuleIntroduction.html" class="mobile-nav-link">Module Introduction</a><a href="/smarc-ipi/ipi-smarc-px30/CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-text"><details ><summary>Software Documentation</summary><a href="/smarc-ipi/ipi-smarc-px30/DebianImages.html" class="mobile-nav-link">Debian</a><a href="/smarc-ipi/ipi-smarc-px30/UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="/smarc-ipi/ipi-smarc-px30/YoctoImages.html" class="mobile-nav-link">Yocto</a><a href="/smarc-ipi/ipi-smarc-px30/AndroidImages.html" class="mobile-nav-link">Android</a><a href="/smarc-ipi/ipi-smarc-px30/HowToFlashImage.html" class="mobile-nav-link">Prepare your SD Card</a></details></strong><strong class="mobile-nav-text"><details ><summary>Software Guideline</summary><a href="/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html" class="mobile-nav-link">How to Build Debian</a><a href="/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="/smarc-ipi/ipi-smarc-px30/HowToBuildYocto.html" class="mobile-nav-link">How to Build Yocto</a><a href="/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html" class="mobile-nav-link">How to Build U-boot</a><a href="/smarc-ipi/ipi-smarc-px30/HowToInstallMRAAUPM.html" class="mobile-nav-link">How to Install MRAA&UPM</a><a href="/smarc-ipi/ipi-smarc-px30/ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>I-Pi SMARC IMX8M Plus</summary><strong class="mobile-nav-text"><details ><summary>Getting Started</summary><a href="/smarc-ipi/ipi-smarc-imx8mp/UnBoxing.html" class="mobile-nav-link">UnBoxing</a></details></strong></details></strong></details></strong>
