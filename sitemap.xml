@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UbuntuImages.html</loc>
+    
+    <lastmod>2021-02-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/index.html</loc>
     
     <lastmod>2021-02-23</lastmod>
@@ -101,13 +108,6 @@
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UnBoxing.html</loc>
-    
-    <lastmod>2021-02-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UbuntuImages.html</loc>
     
     <lastmod>2021-02-04</lastmod>
     
