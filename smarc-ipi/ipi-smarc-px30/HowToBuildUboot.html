@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="Building U-boot on I-Pi SMARC using the LEC-PX30 SMARC module and downloading to the SDcard Prerequisites Development host running recent Ubuntu OS such as 18.04 with compile installed    Make sure it">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-23T06:47:01.094Z">
-<meta property="article:modified_time" content="2021-02-04T09:21:37.334Z">
+<meta property="article:published_time" content="2021-02-25T06:42:34.876Z">
+<meta property="article:modified_time" content="2021-02-25T06:42:34.876Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -85,7 +85,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -139,11 +139,13 @@
 <li><p>After downloading the SDK, extract it</p>
 </li>
 <li><p>Make sure you are in terminal mode and change directory to the u-boot directory</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd px30_buildroot&#x2F;u-boot</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd px30_buildroot&#x2F;u-boot</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>The SDK comes standard with buildroot optimized config file for the module in question<br>If any changes are needed such as modifying the kernel type or location you can make those in the RK_UBOOT_DEFCONFIG section in px30_buildroot/u-boot/device/rockchip/.BoardConfig.mk </p>
 </li>
 <li><p>Build U-Boot using below command: </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo .&#x2F;make.sh evb-px30</span><br></pre></td></tr></table></figure>
+
 
 
 </li>
@@ -158,6 +160,7 @@
 <li><strong>uboot.img</strong>: The U-Boot image, Please flash this binary to uboot partition</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">u-boot&#x2F;</span><br><span class="line">├── px30_loader_v1.11.115.bin</span><br><span class="line">├── trust.img</span><br><span class="line">└── uboot.img</span><br></pre></td></tr></table></figure>
+
 
 
 
