@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/U-boot.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SupportedOSList.html</loc>
     
     <lastmod>2021-02-25</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SupportedOSList.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/U-boot.html</loc>
     
     <lastmod>2021-02-25</lastmod>
     
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildYocto.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
     
     <lastmod>2021-02-25</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildYocto.html</loc>
     
     <lastmod>2021-02-25</lastmod>
     
