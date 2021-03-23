@@ -2,21 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/ModuleIntroduction.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/AIInferencingOnNPU.html</loc>
     
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/YoctoImages.html</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/AndroidImages.html</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UbuntuImages.html</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
+    
+    <lastmod>2021-03-23</lastmod>
     
   </url>
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UnBoxing.html</loc>
     
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     
   </url>
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/YoctoImages.html</loc>
+    
+    <lastmod>2021-03-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/ModuleIntroduction.html</loc>
     
     <lastmod>2021-03-18</lastmod>
     
@@ -149,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/PinoutSummary.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
     <lastmod>2021-03-18</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/SMARCModuleOverview.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/PinoutSummary.html</loc>
     
     <lastmod>2021-03-18</lastmod>
     
@@ -212,14 +254,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
     
     <lastmod>2021-03-18</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
     
     <lastmod>2021-03-18</lastmod>
     
@@ -291,7 +333,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
