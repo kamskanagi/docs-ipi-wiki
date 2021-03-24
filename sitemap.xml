@@ -2,14 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/AIInferencingOnNPU.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
     
-    <lastmod>2021-03-23</lastmod>
+    <lastmod>2021-03-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UserInterfaces.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UnBoxing.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/HowToSetup.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UserInterfaces.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/AIInferencingOnNPU.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
@@ -31,20 +66,6 @@
   
   <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UbuntuImages.html</loc>
-    
-    <lastmod>2021-03-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
-    
-    <lastmod>2021-03-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-imx8mp/UnBoxing.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
@@ -149,13 +170,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UserInterfaces.html</loc>
-    
-    <lastmod>2021-03-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/smarc-ipi/ipi-smarc-px30/UnBoxing.html</loc>
     
     <lastmod>2021-03-18</lastmod>
@@ -254,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
     
     <lastmod>2021-03-18</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildUboot.html</loc>
+    <loc>http://example.com/smarc-ipi/ipi-smarc-px30/HowToBuildDebian.html</loc>
     
     <lastmod>2021-03-18</lastmod>
     
@@ -333,7 +347,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-03-23</lastmod>
+    <lastmod>2021-03-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
